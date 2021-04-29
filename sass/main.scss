@@ -1,0 +1,297 @@
+/*@import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
+@import "./utils/extensions";
+@import "./base/base";
+@import "./base/typography";
+@import "./components/buttons";
+@import "./layout/header";
+@import "./layout/nav";
+@import "./layout/container";
+@import "./layout/form";
+@import "./pages/work";
+@import "./pages/about";
+@import "./pages/project";*/
+
+$colour-primary: #9356DC;
+$colour-secondary: #FF79DA;
+$colour-tertiary: #99E2D0;
+$colour-black: black;
+$colour-white: #fff;
+$colour-light-background: #f0eeee;
+$colour-midark-background: #d3d1d1;
+$colour-dark-background: #3a3838;
+$colour-dark: #9b9a9a;
+
+$font-big: 23px;
+$font-medium: 16px;
+$font-small: 12px;
+
+
+$heading-shadow-size: .55rem;
+$layout-margin: 6rem;
+$grid-gutter: $layout-margin * .25;
+
+$main-font: 'Roboto', sans-serif;
+$second-font: 'Shrikhand', sans-serif;
+
+/* Style général de la page*/
+
+#page {
+    font-family: $main-font;
+}
+
+a {
+    
+    text-decoration: none;
+}
+
+
+
+
+.header {
+    background: $colour-white;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-shadow: 5px 5px 10px $colour-light-background;
+    margin: 0;
+    &__logo {
+        width: 160px;
+        height: auto;
+        
+        
+        }
+
+    &__page {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+
+/* Stle de l'encart description*/
+
+#description {
+    background-color: $colour-light-background;
+    width: 420px;
+    height: 340px;
+    margin: 0;
+    display:flex;
+    flex-direction: column;
+}
+
+.search-bar {
+    height: 50px;
+    background-color: #c7c6c6;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    &__icon {
+        padding: 5px 8px;
+    }
+
+    &__input{
+        border: none;
+        padding: 5px 8px;
+        background-color: $colour-midark-background;
+        font-size: $font-medium;
+        font-family: $main-font;
+        font-weight: 700;
+    }
+}
+
+.explaination {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__short {
+        width: 70%;
+        font-size: $font-big;
+        margin: 25px 0 10px 0;
+               
+    }
+
+    &__long {
+        width: 70%;
+        font-size: $font-medium;
+        font-weight: 300;
+        margin: 0 0 30px 0;
+    }
+}
+
+/* Style du boutton : button*/
+
+.button {
+    font-style: $main-font;
+    font-size: $font-medium;
+    font-weight: 600;
+    height: 50px;
+    width: 230px;
+    color: $colour-white;
+    background-color: $colour-primary;
+    border: none;
+    border-radius: 35px;
+    box-shadow: 5px 5px 10px $colour-midark-background;
+}
+
+
+/* Style de fonctionnement : work */
+
+#work{
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+.work {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 270px;
+
+    &__title {
+        font-size: $font-big;
+        padding-left: 20px;
+        font-weight: 900;
+    }
+
+    &__bar {
+       display: flex;
+       width: 330px;
+       padding: 5px;
+       margin: 5px;
+       
+       
+
+       &--text{
+           width: 330px;
+           margin: 0;
+           background-color: $colour-light-background;
+           padding: 25px;
+           box-shadow: 5px 5px 10px $colour-midark-background;
+           border-radius: 20px;
+           
+       }
+    }
+
+    &__icon {
+        padding: 0 30px 0 10px;
+        color: $colour-dark;
+    }
+
+    &__number {
+        background-color: $colour-primary;
+        color: $colour-white;
+        border-radius: 40px;
+        padding: 8px;
+    }
+}
+
+/*Style de l'encart restaurant*/
+
+
+.restaurant {
+    background-color: $colour-light-background;
+
+    &__title {
+        font-size: $font-big;
+        padding: 40px 0 0 20px;
+        font-weight: 900;
+    }
+
+    &__offer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        margin: 10px 20px 20px 20px;
+    }
+
+    &__photo {
+        display: flex;
+        flex-direction: column;
+        width: 330px;
+        height: 230px;
+        border-radius: 20px;
+        background-color: white;
+        padding-bottom: 5px;
+        box-shadow: 5px 5px 10px #949393;
+    }
+
+    &__pic {
+        width: 330px;
+        height: 170px;
+        border-radius: 20px  20px 0 0;
+    }
+
+    &__band {
+        background-color: $colour-white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 10px;
+        border-radius: 20px;
+    }
+
+    &__name {
+        
+        font-size: $font-medium;
+        font-weight: 900;
+    }
+
+    &__place {
+        font-size: $font-medium;
+        font-weight: 200;
+    }
+
+    &__info {
+        font-size: $font-medium;
+        line-height: 8px;
+    }
+
+    &__love {
+        font-size: $font-big;
+        padding: 15px 25px 15px 0;
+        color: $colour-dark;
+    }
+}
+
+
+/* Style du footer */
+
+.footer {
+    width: auto;
+    padding: 15px;
+    background-color: $colour-dark-background;
+    color: $colour-white;
+    font-family: $main-font;
+
+    &__logo {
+        font-family: $second-font;
+        font-size: 17px;
+        padding: 15px;
+        
+    }
+
+    &__option {
+        list-style: none;
+        line-height: 30px;
+        color: $colour-white;
+        padding-left: 10px;
+        margin-top: 0;
+
+        
+    }
+
+    &__icon {
+        padding-right: 5px;
+    }
+}

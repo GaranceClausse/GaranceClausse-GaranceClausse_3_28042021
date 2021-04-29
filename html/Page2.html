@@ -11,21 +11,24 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="../css/main.css">
     <script src="https://kit.fontawesome.com/6546f5a838.js" crossorigin="anonymous"></script>
 
 </head>
 
-<body>
-    <header>
-        <article class="header__page">
-            <i class="fas fa-arrow-left"></i>
-            <img src="images/ohmyfood.png" alt="logo Ohmyfood" class="header__logo">
-
-        </article>
-    </header>
+<main id="page">
 
     <body>
+
+        <header class="header">
+            <article class="header__page">
+                <i class="fas fa-arrow-left"></i>
+                <img src="images/ohmyfood.png" alt="logo Ohmyfood" class="header__logo">
+
+            </article>
+        </header>
+
+
 
         <!-- Picture  -->
         <section id="picture">
@@ -171,24 +174,27 @@
 
     </body>
 
-    <footer>
-        <img src="images/ohmyfood.png" alt="logo ohmyfood" class="footer__logo">
-        <ul class="footer__option">
-            <a href="#" class="offer">
-                <li><i class="fas fa-utensils"></i>Proposer un restaurant</li>
-            </a>
-            <a href="#" class="become-partner">
-                <li><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
-            </a>
-            <a href="#">
-                <li class="legal">Mentions légales</li>
-            </a>
-            <a href="#">
-                <li class="contact">Contact</li>
-            </a>
-        </ul>
+</main>
 
-    </footer>
+<footer class="footer">
+    <div class="footer__logo">ohmyfood</div>
+
+    <ul class="footer__option">
+        
+            <li class="footer__li offer"><a href="#" class="footer__option"><i class="fas fa-utensils footer__icon"></i>Proposer un restaurant</a></li>
+        
+            <li class="footer__li become-partner"><a href="#" class="footer__option"><i class="fas fa-hands-helping footer__icon"></i>Devenir partenaire</a></li>
+        
+        
+            <li class="footer__li legal"><a href="#" class="footer__option">Mentions légales</a></li>
+        
+        
+            <li class="footer__li contact"><a href="#" class="footer__option">Contact</a></li>
+        
+    </ul>
+
+</footer>
+
 
 
 </html>

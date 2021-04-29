@@ -1,0 +1,231 @@
+@charset "UTF-8";
+/*@import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
+@import "./utils/extensions";
+@import "./base/base";
+@import "./base/typography";
+@import "./components/buttons";
+@import "./layout/header";
+@import "./layout/nav";
+@import "./layout/container";
+@import "./layout/form";
+@import "./pages/work";
+@import "./pages/about";
+@import "./pages/project";*/
+/* Style général de la page*/
+#page {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  background: #fff;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-shadow: 5px 5px 10px #f0eeee;
+  margin: 0;
+}
+.header__logo {
+  width: 160px;
+  height: auto;
+}
+.header__page {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Stle de l'encart description*/
+#description {
+  background-color: #f0eeee;
+  width: 420px;
+  height: 340px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-bar {
+  height: 50px;
+  background-color: #c7c6c6;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.search-bar__icon {
+  padding: 5px 8px;
+}
+.search-bar__input {
+  border: none;
+  padding: 5px 8px;
+  background-color: #d3d1d1;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+.explaination {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.explaination__short {
+  width: 70%;
+  font-size: 23px;
+  margin: 25px 0 10px 0;
+}
+.explaination__long {
+  width: 70%;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0 0 30px 0;
+}
+
+/* Style du boutton : button*/
+.button {
+  font-style: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 50px;
+  width: 230px;
+  color: #fff;
+  background-color: #9356DC;
+  border: none;
+  border-radius: 35px;
+  box-shadow: 5px 5px 10px #d3d1d1;
+}
+
+/* Style de fonctionnement : work */
+#work {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+
+.work {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 270px;
+}
+.work__title {
+  font-size: 23px;
+  padding-left: 20px;
+  font-weight: 900;
+}
+.work__bar {
+  display: flex;
+  width: 330px;
+  padding: 5px;
+  margin: 5px;
+}
+.work__bar--text {
+  width: 330px;
+  margin: 0;
+  background-color: #f0eeee;
+  padding: 25px;
+  box-shadow: 5px 5px 10px #d3d1d1;
+  border-radius: 20px;
+}
+.work__icon {
+  padding: 0 30px 0 10px;
+  color: #9b9a9a;
+}
+.work__number {
+  background-color: #9356DC;
+  color: #fff;
+  border-radius: 40px;
+  padding: 8px;
+}
+
+/*Style de l'encart restaurant*/
+.restaurant {
+  background-color: #f0eeee;
+}
+.restaurant__title {
+  font-size: 23px;
+  padding: 40px 0 0 20px;
+  font-weight: 900;
+}
+.restaurant__offer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px 20px 20px 20px;
+}
+.restaurant__photo {
+  display: flex;
+  flex-direction: column;
+  width: 330px;
+  height: 230px;
+  border-radius: 20px;
+  background-color: white;
+  padding-bottom: 5px;
+  box-shadow: 5px 5px 10px #949393;
+}
+.restaurant__pic {
+  width: 330px;
+  height: 170px;
+  border-radius: 20px 20px 0 0;
+}
+.restaurant__band {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 10px;
+  border-radius: 20px;
+}
+.restaurant__name {
+  font-size: 16px;
+  font-weight: 900;
+}
+.restaurant__place {
+  font-size: 16px;
+  font-weight: 200;
+}
+.restaurant__info {
+  font-size: 16px;
+  line-height: 8px;
+}
+.restaurant__love {
+  font-size: 23px;
+  padding: 15px 25px 15px 0;
+  color: #9b9a9a;
+}
+
+/* Style du footer */
+.footer {
+  width: auto;
+  padding: 15px;
+  background-color: #3a3838;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+.footer__logo {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 17px;
+  padding: 15px;
+}
+.footer__option {
+  list-style: none;
+  line-height: 30px;
+  color: #fff;
+  padding-left: 10px;
+  margin-top: 0;
+}
+.footer__icon {
+  padding-right: 5px;
+}
+
+/*# sourceMappingURL=main.css.map */
