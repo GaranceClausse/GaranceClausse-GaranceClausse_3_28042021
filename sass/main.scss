@@ -220,7 +220,8 @@ a {
     height: 50px;
     width: 230px;
     color: $colour-white;
-    background-color: $colour-primary;
+    background-image: linear-gradient($colour-secondary, $colour-primary);
+    background-image: -webkit-linear-gradient($colour-secondary, $colour-primary);
     border: none;
     border-radius: 35px;
     box-shadow: 5px 5px 10px $colour-midark-background;
@@ -257,6 +258,7 @@ a {
        width: 330px;
        padding: 5px;
        margin: 5px;
+       position: relative;
        
        
 
@@ -274,13 +276,17 @@ a {
     &__icon {
         padding: 0 30px 0 10px;
         color: $colour-dark;
+        font-size: $font-big;
     }
 
     &__number {
         background-color: $colour-primary;
         color: $colour-white;
         border-radius: 20px;
-        padding: 8px;
+        padding: 5px 10px;
+        position: absolute;
+        top: 30px;
+        left: -7px;
     }
 }
 
@@ -295,6 +301,7 @@ a {
         font-size: $font-big;
         padding: 20px 0 0 20px;
         font-weight: 900;
+        text-align: center;
 
         @media all and (min-width:780px) {
             font-size: $font-super-big;
@@ -514,3 +521,44 @@ a {
 
     
 }
+
+
+/* Effets et animations */
+
+.fa-heart {
+    border-radius: 50%;
+    padding:.2em;
+}
+.fa-heart::before {
+    content: "\f004";
+    font-weight: bold;
+    transition: color 1s ease-out;
+    background: $colour-midark-background;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+   -webkit-text-fill-color:transparent;
+}
+
+.fa-heart:hover::before{
+    background:-webkit-linear-gradient(top, $colour-secondary, $colour-primary);
+    background: linear-gradient(to bottom, $colour-secondary, $colour-primary);
+    background:-moz-linear-gradient(top, $colour-secondary, $colour-primary);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+   -webkit-text-fill-color:-webkit-linear-gradient(top, $colour-secondary, $colour-primary);;
+    
+}
+
+/*background-image:-webkit-linear-gradient(135deg, #9796FF 0%, #CAFF96 30%, #FEFF96 90%);
+    background-image: linear-gradient(to bottom-right, #9796FF 0%, #CAFF96 30%, #FEFF96 90%);
+    
+    font-size: 40px;      
+	background:-moz-linear-gradient(top, #e72c83 0%, #a742c6 100%); 
+    background: -webkit-linear-gradient(top, #e72c83 0%,#a742c6 100%); 
+    background: linear-gradient(to bottom, #e72c83 0%,#a742c6 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+   -webkit-text-fill-color:transparent;*/
