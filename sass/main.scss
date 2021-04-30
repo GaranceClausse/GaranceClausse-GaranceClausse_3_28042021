@@ -23,6 +23,7 @@ $colour-midark-background: #d3d1d1;
 $colour-dark-background: #3a3838;
 $colour-dark: #9b9a9a;
 
+$font-super-big: 26px;
 $font-big: 23px;
 $font-medium: 16px;
 $font-small: 12px;
@@ -35,10 +36,62 @@ $grid-gutter: $layout-margin * .25;
 $main-font: 'Roboto', sans-serif;
 $second-font: 'Shrikhand', sans-serif;
 
+@mixin flex-center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+@mixin page-display() {
+
+    background-color: $colour-light-background;
+   
+    &__title {
+        width: 40px;
+        font-size: $font-medium;
+        padding-bottom: 6px;
+        border-bottom: 3px solid $colour-tertiary;
+    }
+
+    &__content {
+        padding: 20px 0;
+
+        @media all and (min-width: 780px) {
+            padding: 20px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 360px;
+        height: 70px;
+        box-shadow: 5px 5px 10px $colour-dark-background;
+        border-radius: 20px;
+        margin: 15px 0 0 0;
+    }
+
+    &__explain {
+        padding-left: 10px;
+        line-height: 8px;
+    }
+
+}
+
 /* Style général de la page*/
 
 #page {
     font-family: $main-font;
+    background-color: $colour-light-background;
+    /*
+    @include flex-center();
+
+    @media all and (min-width: 780px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }*/
 }
 
 a {
@@ -52,12 +105,11 @@ a {
 .header {
     background: $colour-white;
     height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center();
     width: 100%;
     box-shadow: 5px 5px 10px $colour-light-background;
     margin: 0;
+
     &__logo {
         width: 160px;
         height: auto;
@@ -65,9 +117,19 @@ a {
         
         }
 
+    &__icon {
+        
+        position: absolute;
+        top: 35px;
+        left: 55px;
+    }
+
+    &__ancre {
+        color: $colour-black;
+    }
+
     &__page {
-        display: flex;
-        align-items: center;
+        @include flex-center();
         width: 100%;
     }
 }
@@ -78,19 +140,27 @@ a {
 #description {
     background-color: $colour-light-background;
     width: 420px;
-    height: 340px;
+    height: 270px;
     margin: 0;
-    display:flex;
+    padding-bottom: 30px;
+    @include flex-center();
     flex-direction: column;
+    text-align: center;
+
+    @media all and (min-width:780px) {
+        width: 48%;
+        height: 100%;
+        border-right: 2px dotted $colour-secondary;
+    }
 }
 
 .search-bar {
-    height: 50px;
-    background-color: #c7c6c6;
-    display: flex;
+    height: 60px;
+    width: 100%;
+    background-color: $colour-midark-background;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    @include flex-center();
+    padding: 0;
 
     &__icon {
         padding: 5px 8px;
@@ -98,23 +168,28 @@ a {
 
     &__input{
         border: none;
-        padding: 5px 8px;
+        padding: 4px 8px;
         background-color: $colour-midark-background;
         font-size: $font-medium;
         font-family: $main-font;
         font-weight: 700;
     }
+    
+    
 }
 
+
+/* Style des explications : explaination */
+
 .explaination {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flex-center();
+    padding: 10px 0 25px 0;
 
     &__short {
         width: 70%;
         font-size: $font-big;
+        font-weight: 900;
         margin: 25px 0 10px 0;
                
     }
@@ -124,8 +199,12 @@ a {
         font-size: $font-medium;
         font-weight: 300;
         margin: 0 0 30px 0;
+        line-height: 20px;
     }
+
 }
+
+
 
 /* Style du boutton : button*/
 
@@ -146,15 +225,19 @@ a {
 /* Style de fonctionnement : work */
 
 #work{
-    display: flex;
+    @include flex-center();
     flex-direction: column;
     padding-top: 30px;
+
+    @media all and (min-width:780px) {
+        width: 48%;
+        
+    }
 }
 
 .work {
-    display: flex;
+    @include flex-center();
     flex-direction: row;
-    align-items: center;
     width: 270px;
 
     &__title {
@@ -190,7 +273,7 @@ a {
     &__number {
         background-color: $colour-primary;
         color: $colour-white;
-        border-radius: 40px;
+        border-radius: 20px;
         padding: 8px;
     }
 }
@@ -200,11 +283,17 @@ a {
 
 .restaurant {
     background-color: $colour-light-background;
+    width: 100%;
 
     &__title {
         font-size: $font-big;
-        padding: 40px 0 0 20px;
+        padding: 20px 0 0 20px;
         font-weight: 900;
+
+        @media all and (min-width:780px) {
+            font-size: $font-super-big;
+            text-align: center;
+        }
     }
 
     &__offer {
@@ -213,6 +302,13 @@ a {
         align-items: center;
         justify-content: space-around;
         margin: 10px 20px 20px 20px;
+
+        @media all and (min-width:780px) {
+            width: 100%;
+            height: auto;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
     }
 
     &__photo {
@@ -261,14 +357,25 @@ a {
         font-size: $font-big;
         padding: 15px 25px 15px 0;
         color: $colour-dark;
+
+        &--big {
+            padding: 0 0 7px 0;
+            font-size: $font-super-big;
+        }
     }
+
+    &__ancre {
+        color: $colour-black;
+    }
+
+   
 }
 
 
 /* Style du footer */
 
 .footer {
-    width: auto;
+    width: 100%;
     padding: 15px;
     background-color: $colour-dark-background;
     color: $colour-white;
@@ -294,4 +401,108 @@ a {
     &__icon {
         padding-right: 5px;
     }
+}
+
+
+/* Style général des pages de restaurant*/
+
+#page {
+    @include flex-center();
+    flex-direction: column;
+    
+}
+/*
+@media all and (min-width: 780px) {
+    #page {
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+    
+    }
+}*/
+
+
+
+        /* Picture + name */
+
+
+.picture {
+    margin: 0;
+    padding: 0;
+    @include flex-center();
+    flex-direction: column;
+    
+
+    &__img {
+        height: 270px;
+        width: 420px;
+        
+    }
+
+    &__band {
+        position: absolute;
+        top: 290px;
+        background-color: $colour-light-background;
+        width: 420px;
+        height: 60px;
+        border-radius: 40px 40px 0 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-end;
+        
+    }
+
+    &__restaurant {
+        font-family: $second-font;
+        font-size: $font-super-big;
+        margin: 0;
+
+       
+    }
+}
+
+
+    /* Style de entrées : starters */
+
+.dish {
+    width: 100%;
+    @include flex-center();
+    flex-direction: column;
+
+    @media all and (min-width: 780px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+.starter {
+    @include page-display();
+}
+
+
+/* Style des palts : main */
+
+.main {
+    @include page-display();
+}
+
+
+/* Style des desserts : desert */
+
+.desert {
+    @include page-display();
+}
+
+
+
+/* Style du bouton de commande : order__button */
+
+.order {
+    width: 100%;
+    @include flex-center();
+    padding: 50px 0 70px 0;
+    background-color: $colour-light-background;
+
+    
 }

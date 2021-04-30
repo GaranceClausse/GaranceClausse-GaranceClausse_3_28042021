@@ -16,6 +16,14 @@
 /* Style général de la page*/
 #page {
   font-family: "Roboto", sans-serif;
+  background-color: #f0eeee;
+  /*
+  @include flex-center();
+
+  @media all and (min-width: 780px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+  }*/
 }
 
 a {
@@ -36,8 +44,17 @@ a {
   width: 160px;
   height: auto;
 }
+.header__icon {
+  position: absolute;
+  top: 35px;
+  left: 55px;
+}
+.header__ancre {
+  color: black;
+}
 .header__page {
   display: flex;
+  justify-content: center;
   align-items: center;
   width: 100%;
 }
@@ -46,41 +63,57 @@ a {
 #description {
   background-color: #f0eeee;
   width: 420px;
-  height: 340px;
+  height: 270px;
   margin: 0;
+  padding-bottom: 30px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
+  text-align: center;
+}
+@media all and (min-width: 780px) {
+  #description {
+    width: 48%;
+    height: 100%;
+    border-right: 2px dotted #FF79DA;
+  }
 }
 
 .search-bar {
-  height: 50px;
-  background-color: #c7c6c6;
-  display: flex;
+  height: 60px;
+  width: 100%;
+  background-color: #d3d1d1;
   flex-direction: row;
-  align-items: center;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 0;
 }
 .search-bar__icon {
   padding: 5px 8px;
 }
 .search-bar__input {
   border: none;
-  padding: 5px 8px;
+  padding: 4px 8px;
   background-color: #d3d1d1;
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
 }
 
+/* Style des explications : explaination */
 .explaination {
-  display: flex;
   flex-direction: column;
+  display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px 0 25px 0;
 }
 .explaination__short {
   width: 70%;
   font-size: 23px;
+  font-weight: 900;
   margin: 25px 0 10px 0;
 }
 .explaination__long {
@@ -88,6 +121,7 @@ a {
   font-size: 16px;
   font-weight: 300;
   margin: 0 0 30px 0;
+  line-height: 20px;
 }
 
 /* Style du boutton : button*/
@@ -107,14 +141,22 @@ a {
 /* Style de fonctionnement : work */
 #work {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   padding-top: 30px;
+}
+@media all and (min-width: 780px) {
+  #work {
+    width: 48%;
+  }
 }
 
 .work {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
   align-items: center;
+  flex-direction: row;
   width: 270px;
 }
 .work__title {
@@ -143,18 +185,25 @@ a {
 .work__number {
   background-color: #9356DC;
   color: #fff;
-  border-radius: 40px;
+  border-radius: 20px;
   padding: 8px;
 }
 
 /*Style de l'encart restaurant*/
 .restaurant {
   background-color: #f0eeee;
+  width: 100%;
 }
 .restaurant__title {
   font-size: 23px;
-  padding: 40px 0 0 20px;
+  padding: 20px 0 0 20px;
   font-weight: 900;
+}
+@media all and (min-width: 780px) {
+  .restaurant__title {
+    font-size: 26px;
+    text-align: center;
+  }
 }
 .restaurant__offer {
   display: flex;
@@ -162,6 +211,14 @@ a {
   align-items: center;
   justify-content: space-around;
   margin: 10px 20px 20px 20px;
+}
+@media all and (min-width: 780px) {
+  .restaurant__offer {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 .restaurant__photo {
   display: flex;
@@ -203,10 +260,17 @@ a {
   padding: 15px 25px 15px 0;
   color: #9b9a9a;
 }
+.restaurant__love--big {
+  padding: 0 0 7px 0;
+  font-size: 26px;
+}
+.restaurant__ancre {
+  color: black;
+}
 
 /* Style du footer */
 .footer {
-  width: auto;
+  width: 100%;
   padding: 15px;
   background-color: #3a3838;
   color: #fff;
@@ -226,6 +290,180 @@ a {
 }
 .footer__icon {
   padding-right: 5px;
+}
+
+/* Style général des pages de restaurant*/
+#page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/*
+@media all and (min-width: 780px) {
+    #page {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+
+    }
+}*/
+/* Picture + name */
+.picture {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.picture__img {
+  height: 270px;
+  width: 420px;
+}
+.picture__band {
+  position: absolute;
+  top: 290px;
+  background-color: #f0eeee;
+  width: 420px;
+  height: 60px;
+  border-radius: 40px 40px 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+.picture__restaurant {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 26px;
+  margin: 0;
+}
+
+/* Style de entrées : starters */
+.dish {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media all and (min-width: 780px) {
+  .dish {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.starter {
+  background-color: #f0eeee;
+}
+.starter__title {
+  width: 40px;
+  font-size: 16px;
+  padding-bottom: 6px;
+  border-bottom: 3px solid #99E2D0;
+}
+.starter__content {
+  padding: 20px 0;
+}
+@media all and (min-width: 780px) {
+  .starter__content {
+    padding: 20px;
+  }
+}
+.starter__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 360px;
+  height: 70px;
+  box-shadow: 5px 5px 10px #3a3838;
+  border-radius: 20px;
+  margin: 15px 0 0 0;
+}
+.starter__explain {
+  padding-left: 10px;
+  line-height: 8px;
+}
+
+/* Style des palts : main */
+.main {
+  background-color: #f0eeee;
+}
+.main__title {
+  width: 40px;
+  font-size: 16px;
+  padding-bottom: 6px;
+  border-bottom: 3px solid #99E2D0;
+}
+.main__content {
+  padding: 20px 0;
+}
+@media all and (min-width: 780px) {
+  .main__content {
+    padding: 20px;
+  }
+}
+.main__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 360px;
+  height: 70px;
+  box-shadow: 5px 5px 10px #3a3838;
+  border-radius: 20px;
+  margin: 15px 0 0 0;
+}
+.main__explain {
+  padding-left: 10px;
+  line-height: 8px;
+}
+
+/* Style des desserts : desert */
+.desert {
+  background-color: #f0eeee;
+}
+.desert__title {
+  width: 40px;
+  font-size: 16px;
+  padding-bottom: 6px;
+  border-bottom: 3px solid #99E2D0;
+}
+.desert__content {
+  padding: 20px 0;
+}
+@media all and (min-width: 780px) {
+  .desert__content {
+    padding: 20px;
+  }
+}
+.desert__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 360px;
+  height: 70px;
+  box-shadow: 5px 5px 10px #3a3838;
+  border-radius: 20px;
+  margin: 15px 0 0 0;
+}
+.desert__explain {
+  padding-left: 10px;
+  line-height: 8px;
+}
+
+/* Style du bouton de commande : order__button */
+.order {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0 70px 0;
+  background-color: #f0eeee;
 }
 
 /*# sourceMappingURL=main.css.map */
