@@ -36,9 +36,18 @@ a {
   width: 160px;
   height: auto;
 }
+.header__icon {
+  position: absolute;
+  top: 35px;
+  left: 55px;
+}
+.header__ancre {
+  color: black;
+}
 .header__page {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
 }
 
@@ -203,6 +212,13 @@ a {
   padding: 15px 25px 15px 0;
   color: #9b9a9a;
 }
+.restaurant__love--big {
+  padding: 0 0 7px 0;
+  font-size: 26px;
+}
+.restaurant__ancre {
+  color: black;
+}
 
 /* Style du footer */
 .footer {
@@ -226,6 +242,37 @@ a {
 }
 .footer__icon {
   padding-right: 5px;
+}
+
+/* Style général des pages de restaurant*/
+.picture {
+  margin: 0;
+  padding: 0;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.picture__img {
+  height: 270px;
+  width: 430px;
+}
+.picture__band {
+  position: absolute;
+  top: 290px;
+  background-color: #f0eeee;
+  width: 430px;
+  height: 60px;
+  border-radius: 40px 40px 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+.picture__restaurant {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 26px;
+  margin: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
