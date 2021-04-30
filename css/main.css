@@ -14,16 +14,23 @@
 @import "./pages/about";
 @import "./pages/project";*/
 /* Style général de la page*/
-#page {
+body {
+  margin: 0;
+}
+
+#page-index {
   font-family: "Roboto", sans-serif;
   background-color: #f0eeee;
-  /*
-  @include flex-center();
-
-  @media all and (min-width: 780px) {
-      flex-direction: row;
-      flex-wrap: wrap;
-  }*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media all and (min-width: 780px) {
+  #page-index {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 a {
@@ -144,7 +151,8 @@ a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-top: 30px;
+  padding: 20px 10px;
+  background-color: #fff;
 }
 @media all and (min-width: 780px) {
   #work {
@@ -294,6 +302,8 @@ a {
 
 /* Style général des pages de restaurant*/
 #page {
+  font-family: "Roboto", sans-serif;
+  background-color: #f0eeee;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -377,6 +387,7 @@ a {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  background-color: #fff;
   width: 360px;
   height: 70px;
   box-shadow: 5px 5px 10px #3a3838;
@@ -411,6 +422,7 @@ a {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  background-color: #fff;
   width: 360px;
   height: 70px;
   box-shadow: 5px 5px 10px #3a3838;
@@ -445,6 +457,7 @@ a {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  background-color: #fff;
   width: 360px;
   height: 70px;
   box-shadow: 5px 5px 10px #3a3838;

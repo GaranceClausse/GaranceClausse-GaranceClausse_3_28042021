@@ -66,6 +66,7 @@ $second-font: 'Shrikhand', sans-serif;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        background-color: $colour-white;
         width: 360px;
         height: 70px;
         box-shadow: 5px 5px 10px $colour-dark-background;
@@ -82,20 +83,23 @@ $second-font: 'Shrikhand', sans-serif;
 
 /* Style général de la page*/
 
-#page {
+body {
+    margin: 0;
+}
+
+#page-index {
     font-family: $main-font;
     background-color: $colour-light-background;
-    /*
     @include flex-center();
+    flex-direction: column;
 
     @media all and (min-width: 780px) {
         flex-direction: row;
         flex-wrap: wrap;
-    }*/
+    }
 }
 
 a {
-    
     text-decoration: none;
 }
 
@@ -201,6 +205,7 @@ a {
         margin: 0 0 30px 0;
         line-height: 20px;
     }
+    
 
 }
 
@@ -227,7 +232,8 @@ a {
 #work{
     @include flex-center();
     flex-direction: column;
-    padding-top: 30px;
+    padding: 20px 10px;
+    background-color: $colour-white;
 
     @media all and (min-width:780px) {
         width: 48%;
@@ -407,6 +413,8 @@ a {
 /* Style général des pages de restaurant*/
 
 #page {
+    font-family: $main-font;
+    background-color: $colour-light-background;
     @include flex-center();
     flex-direction: column;
     
