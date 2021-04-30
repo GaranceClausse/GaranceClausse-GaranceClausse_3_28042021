@@ -16,6 +16,15 @@
 /* Style général de la page*/
 #page {
   font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media all and (min-width: 780px) {
+  #page {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 a {
@@ -46,8 +55,8 @@ a {
 }
 .header__page {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 100%;
 }
 
@@ -55,41 +64,57 @@ a {
 #description {
   background-color: #f0eeee;
   width: 420px;
-  height: 340px;
+  height: 270px;
   margin: 0;
+  padding-bottom: 30px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
+  text-align: center;
+}
+@media all and (min-width: 780px) {
+  #description {
+    width: 48%;
+    height: 100%;
+    border-right: 2px dotted #FF79DA;
+  }
 }
 
 .search-bar {
-  height: 50px;
-  background-color: #c7c6c6;
-  display: flex;
+  height: 60px;
+  width: 100%;
+  background-color: #d3d1d1;
   flex-direction: row;
-  align-items: center;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 0;
 }
 .search-bar__icon {
   padding: 5px 8px;
 }
 .search-bar__input {
   border: none;
-  padding: 5px 8px;
+  padding: 4px 8px;
   background-color: #d3d1d1;
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
 }
 
+/* Style des explications : explaination */
 .explaination {
-  display: flex;
   flex-direction: column;
+  display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px 0 25px 0;
 }
 .explaination__short {
   width: 70%;
   font-size: 23px;
+  font-weight: 900;
   margin: 25px 0 10px 0;
 }
 .explaination__long {
@@ -97,6 +122,7 @@ a {
   font-size: 16px;
   font-weight: 300;
   margin: 0 0 30px 0;
+  line-height: 20px;
 }
 
 /* Style du boutton : button*/
@@ -116,14 +142,22 @@ a {
 /* Style de fonctionnement : work */
 #work {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   padding-top: 30px;
+}
+@media all and (min-width: 780px) {
+  #work {
+    width: 48%;
+  }
 }
 
 .work {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
   align-items: center;
+  flex-direction: row;
   width: 270px;
 }
 .work__title {
@@ -152,7 +186,7 @@ a {
 .work__number {
   background-color: #9356DC;
   color: #fff;
-  border-radius: 40px;
+  border-radius: 20px;
   padding: 8px;
 }
 
@@ -162,8 +196,14 @@ a {
 }
 .restaurant__title {
   font-size: 23px;
-  padding: 40px 0 0 20px;
+  padding: 20px 0 0 20px;
   font-weight: 900;
+}
+@media all and (min-width: 780px) {
+  .restaurant__title {
+    font-size: 26px;
+    text-align: center;
+  }
 }
 .restaurant__offer {
   display: flex;
@@ -171,6 +211,14 @@ a {
   align-items: center;
   justify-content: space-around;
   margin: 10px 20px 20px 20px;
+}
+@media all and (min-width: 780px) {
+  .restaurant__offer {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 .restaurant__photo {
   display: flex;
@@ -247,15 +295,14 @@ a {
 /* Style général des pages de restaurant*/
 #page {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 @media all and (min-width: 780px) {
   #page {
-    display: flex;
     flex-direction: row;
-    align-items: center;
     flex-wrap: wrap;
     background-color: #f0eeee;
   }
@@ -265,8 +312,9 @@ a {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .picture__img {
   height: 270px;
