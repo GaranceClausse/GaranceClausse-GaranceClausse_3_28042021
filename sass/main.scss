@@ -290,7 +290,7 @@ a {
 /* Style du footer */
 
 .footer {
-    width: auto;
+    width: 100%;
     padding: 15px;
     background-color: $colour-dark-background;
     color: $colour-white;
@@ -321,11 +321,32 @@ a {
 
 /* Style général des pages de restaurant*/
 
+#page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+@media all and (min-width: 780px) {
+    #page {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: $colour-light-background;
+    
+    }
+}
+
+
+
+        /* Picture + name */
+
 
 .picture {
     margin: 0;
     padding: 0;
-    height: 320px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -357,4 +378,121 @@ a {
 
        
     }
+}
+
+
+    /* Style de entrées : starters */
+
+.starter {
+    background-color: $colour-light-background;
+    width: 430px;
+    padding-top: 30px;
+
+    &__content {
+        padding-left: 30px;
+       
+    }
+
+    &__title {
+        width: 40px;
+        font-size: $font-medium;
+        padding-bottom: 6px;
+        border-bottom: 3px solid $colour-tertiary;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 380px;
+        height: 70px;
+        box-shadow: 5px 5px 10px $colour-dark-background;
+        border-radius: 20px;
+        margin: 15px 0;
+    }
+
+    &__explain {
+        padding-left: 10px;
+        line-height: 8px;
+    }
+
+}
+
+
+/* Style des palts : main */
+
+.main {
+    background-color: $colour-light-background;
+    width: 430px;
+    padding-top: 30px;
+
+    &__content {
+        padding-left: 30px;
+       
+    }
+
+    &__title {
+        width: 40px;
+        font-size: $font-medium;
+        padding-bottom: 6px;
+        border-bottom: 3px solid $colour-tertiary;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 380px;
+        height: 70px;
+        box-shadow: 5px 5px 10px $colour-dark-background;
+        border-radius: 20px;
+        margin: 15px 0;
+    }
+
+    &__explain {
+        padding-left: 10px;
+        line-height: 8px;
+    }
+
+}
+
+
+/* Style des desserts : desert */
+
+.desert {
+    background-color: $colour-light-background;
+    width: 430px;
+    padding-top: 30px;
+
+    &__content {
+        padding-left: 30px;
+       
+    }
+
+    &__title {
+        width: 40px;
+        font-size: $font-medium;
+        padding-bottom: 6px;
+        border-bottom: 3px solid $colour-tertiary;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 380px;
+        height: 70px;
+        box-shadow: 5px 5px 10px $colour-dark-background;
+        border-radius: 20px;
+        margin: 15px 0;
+    }
+
+    &__explain {
+        padding-left: 10px;
+        line-height: 8px;
+    }
+
 }

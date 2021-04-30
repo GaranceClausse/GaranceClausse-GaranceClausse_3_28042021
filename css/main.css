@@ -222,7 +222,7 @@ a {
 
 /* Style du footer */
 .footer {
-  width: auto;
+  width: 100%;
   padding: 15px;
   background-color: #3a3838;
   color: #fff;
@@ -245,10 +245,25 @@ a {
 }
 
 /* Style général des pages de restaurant*/
+#page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media all and (min-width: 780px) {
+  #page {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #f0eeee;
+  }
+}
+/* Picture + name */
 .picture {
   margin: 0;
   padding: 0;
-  height: 320px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -273,6 +288,99 @@ a {
   font-family: "Shrikhand", sans-serif;
   font-size: 26px;
   margin: 0;
+}
+
+/* Style de entrées : starters */
+.starter {
+  background-color: #f0eeee;
+  width: 430px;
+  padding-top: 30px;
+}
+.starter__content {
+  padding-left: 30px;
+}
+.starter__title {
+  width: 40px;
+  font-size: 16px;
+  padding-bottom: 6px;
+  border-bottom: 3px solid #99E2D0;
+}
+.starter__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 380px;
+  height: 70px;
+  box-shadow: 5px 5px 10px #3a3838;
+  border-radius: 20px;
+  margin: 15px 0;
+}
+.starter__explain {
+  padding-left: 10px;
+  line-height: 8px;
+}
+
+/* Style des palts : main */
+.main {
+  background-color: #f0eeee;
+  width: 430px;
+  padding-top: 30px;
+}
+.main__content {
+  padding-left: 30px;
+}
+.main__title {
+  width: 40px;
+  font-size: 16px;
+  padding-bottom: 6px;
+  border-bottom: 3px solid #99E2D0;
+}
+.main__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 380px;
+  height: 70px;
+  box-shadow: 5px 5px 10px #3a3838;
+  border-radius: 20px;
+  margin: 15px 0;
+}
+.main__explain {
+  padding-left: 10px;
+  line-height: 8px;
+}
+
+/* Style des desserts : desert */
+.desert {
+  background-color: #f0eeee;
+  width: 430px;
+  padding-top: 30px;
+}
+.desert__content {
+  padding-left: 30px;
+}
+.desert__title {
+  width: 40px;
+  font-size: 16px;
+  padding-bottom: 6px;
+  border-bottom: 3px solid #99E2D0;
+}
+.desert__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 380px;
+  height: 70px;
+  box-shadow: 5px 5px 10px #3a3838;
+  border-radius: 20px;
+  margin: 15px 0;
+}
+.desert__explain {
+  padding-left: 10px;
+  line-height: 8px;
 }
 
 /*# sourceMappingURL=main.css.map */
