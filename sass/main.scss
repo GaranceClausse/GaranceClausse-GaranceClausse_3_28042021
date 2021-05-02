@@ -66,36 +66,65 @@ $second-font: 'Shrikhand', sans-serif;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        background-color: $colour-white;
         width: 360px;
         height: 70px;
         box-shadow: 5px 5px 10px $colour-dark-background;
         border-radius: 20px;
         margin: 15px 0 0 0;
+        position: relative;
     }
 
     &__explain {
         padding-left: 10px;
-        line-height: 8px;
+        line-height: 15px;
+        width: 90%;
+        
+    }
+
+    &__name {
+        margin: 5px 0;
+        word-break: break-all;
+    }
+
+    &__compo {
+        width: 90%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        margin: 0;
+        padding: 7px 0;
+    }
+
+    &__price {
+        font-weight: 900;
+        padding: 20px;
+        position: absolute;
+        top: 20px;
+        right: 5px;
     }
 
 }
 
 /* Style général de la page*/
 
-#page {
+body {
+    margin: 0;
+}
+
+#page-index {
     font-family: $main-font;
     background-color: $colour-light-background;
-    /*
     @include flex-center();
+    flex-direction: column;
 
     @media all and (min-width: 780px) {
         flex-direction: row;
         flex-wrap: wrap;
-    }*/
+    }
 }
 
 a {
-    
     text-decoration: none;
 }
 
@@ -139,7 +168,7 @@ a {
 
 #description {
     background-color: $colour-light-background;
-    width: 420px;
+    width: 100%;
     height: 270px;
     margin: 0;
     padding-bottom: 30px;
@@ -148,8 +177,9 @@ a {
     text-align: center;
 
     @media all and (min-width:780px) {
+        position: relative;
         width: 48%;
-        height: 100%;
+        padding-top: 85px;
         border-right: 2px dotted $colour-secondary;
     }
 }
@@ -173,6 +203,11 @@ a {
         font-size: $font-medium;
         font-family: $main-font;
         font-weight: 700;
+    }
+
+    @media all and (min-width: 780px) {
+        position: absolute;
+        top: 0;
     }
     
     
@@ -201,6 +236,7 @@ a {
         margin: 0 0 30px 0;
         line-height: 20px;
     }
+    
 
 }
 
@@ -215,7 +251,8 @@ a {
     height: 50px;
     width: 230px;
     color: $colour-white;
-    background-color: $colour-primary;
+    background-image: linear-gradient($colour-secondary, $colour-primary);
+    background-image: -webkit-linear-gradient($colour-secondary, $colour-primary);
     border: none;
     border-radius: 35px;
     box-shadow: 5px 5px 10px $colour-midark-background;
@@ -227,7 +264,9 @@ a {
 #work{
     @include flex-center();
     flex-direction: column;
-    padding-top: 30px;
+    padding: 20px 10px;
+    background-color: $colour-white;
+    width: 100%;
 
     @media all and (min-width:780px) {
         width: 48%;
@@ -241,9 +280,15 @@ a {
     width: 270px;
 
     &__title {
-        font-size: $font-big;
+        font-size: $font-super-big;
         padding-left: 20px;
         font-weight: 900;
+        margin-right: 30%;
+
+        @media all and (min-width: 780px) {
+            margin: 0 0 35px 0;
+        }
+        
     }
 
     &__bar {
@@ -251,6 +296,7 @@ a {
        width: 330px;
        padding: 5px;
        margin: 5px;
+       position: relative;
        
        
 
@@ -261,20 +307,32 @@ a {
            padding: 25px;
            box-shadow: 5px 5px 10px $colour-midark-background;
            border-radius: 20px;
-           
-       }
+
+           &:hover {
+               background-color: $colour-primary;
+               opacity: 0.4;
+                + &__icon {
+               transform: color($colour-primary);
+                }
+            }
+        }
     }
 
     &__icon {
         padding: 0 30px 0 10px;
         color: $colour-dark;
+        font-size: $font-big;
+        transition: transform 330ms ease-in-out;
     }
 
     &__number {
         background-color: $colour-primary;
         color: $colour-white;
         border-radius: 20px;
-        padding: 8px;
+        padding: 5px 10px;
+        position: absolute;
+        top: 30px;
+        left: -7px;
     }
 }
 
@@ -286,13 +344,15 @@ a {
     width: 100%;
 
     &__title {
-        font-size: $font-big;
+        font-size: $font-super-big;
         padding: 20px 0 0 20px;
         font-weight: 900;
+        text-align: center;
+        margin-right: 37%;
 
         @media all and (min-width:780px) {
-            font-size: $font-super-big;
             text-align: center;
+            margin-right: 0;
         }
     }
 
@@ -407,6 +467,8 @@ a {
 /* Style général des pages de restaurant*/
 
 #page {
+    font-family: $main-font;
+    background-color: $colour-light-background;
     @include flex-center();
     flex-direction: column;
     
@@ -506,3 +568,33 @@ a {
 
     
 }
+
+
+/* Effets et animations */
+
+.fa-heart {
+    border-radius: 50%;
+    padding:.2em;
+}
+.fa-heart::before {
+    content: "\f004";
+    font-weight: bold;
+    transition: color 1s ease-out;
+    background: $colour-midark-background;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.fa-heart:hover::before{
+    background:-webkit-linear-gradient(top right, $colour-primary, $colour-secondary 70%);
+    background: linear-gradient(to bottom left, $colour-primary,  $colour-secondary 70%);
+    background:-moz-linear-gradient(top right, $colour-primary, $colour-secondary 70%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+   -webkit-text-fill-color:-webkit-linear-gradient(top, $colour-secondary, $colour-primary);
+    
+}
+
