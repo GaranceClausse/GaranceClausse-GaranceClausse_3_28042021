@@ -206,9 +206,6 @@ a {
   background-color: #9356DC;
   opacity: 0.4;
 }
-+ .work__bar--text:hover__icon {
-  transform: color(#9356DC);
-}
 .work__icon {
   padding: 0 30px 0 10px;
   color: #9b9a9a;
@@ -431,23 +428,43 @@ a {
   width: 90%;
 }
 .starter__name {
-  margin: 5px 0;
+  margin: 10px 0 0 10px;
   word-break: break-all;
 }
 .starter__compo {
-  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: auto;
+  padding: 10px;
+}
+.starter__compo__text {
+  width: 70%;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   margin: 0;
-  padding: 7px 0;
+  padding: 3px;
 }
 .starter__price {
   font-weight: 900;
+}
+.starter__select {
+  visibility: hidden;
+  width: 0px;
+}
+.starter__select:hover {
+  visibility: visible;
+  border-radius: 0 20px 20px 0;
+  background-color: #99E2D0;
+  height: 100%;
+  width: 60px;
+}
+.starter__icon {
+  color: #fff;
+  font-size: 26px;
   padding: 20px;
-  position: absolute;
-  top: 20px;
-  right: 5px;
 }
 
 /* Style des palts : main */
@@ -487,23 +504,43 @@ a {
   width: 90%;
 }
 .main__name {
-  margin: 5px 0;
+  margin: 10px 0 0 10px;
   word-break: break-all;
 }
 .main__compo {
-  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: auto;
+  padding: 10px;
+}
+.main__compo__text {
+  width: 70%;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   margin: 0;
-  padding: 7px 0;
+  padding: 3px;
 }
 .main__price {
   font-weight: 900;
+}
+.main__select {
+  visibility: hidden;
+  width: 0px;
+}
+.main__select:hover {
+  visibility: visible;
+  border-radius: 0 20px 20px 0;
+  background-color: #99E2D0;
+  height: 100%;
+  width: 60px;
+}
+.main__icon {
+  color: #fff;
+  font-size: 26px;
   padding: 20px;
-  position: absolute;
-  top: 20px;
-  right: 5px;
 }
 
 /* Style des desserts : desert */
@@ -543,23 +580,43 @@ a {
   width: 90%;
 }
 .desert__name {
-  margin: 5px 0;
+  margin: 10px 0 0 10px;
   word-break: break-all;
 }
 .desert__compo {
-  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: auto;
+  padding: 10px;
+}
+.desert__compo__text {
+  width: 70%;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   margin: 0;
-  padding: 7px 0;
+  padding: 3px;
 }
 .desert__price {
   font-weight: 900;
+}
+.desert__select {
+  visibility: hidden;
+  width: 0px;
+}
+.desert__select:hover {
+  visibility: visible;
+  border-radius: 0 20px 20px 0;
+  background-color: #99E2D0;
+  height: 100%;
+  width: 60px;
+}
+.desert__icon {
+  color: #fff;
+  font-size: 26px;
   padding: 20px;
-  position: absolute;
-  top: 20px;
-  right: 5px;
 }
 
 /* Style du bouton de commande : order__button */

@@ -83,26 +83,55 @@ $second-font: 'Shrikhand', sans-serif;
     }
 
     &__name {
-        margin: 5px 0;
+        margin: 10px 0 0 10px;
         word-break: break-all;
     }
 
     &__compo {
-        width: 90%;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-        margin: 0;
-        padding: 7px 0;
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        margin: auto;
+        padding: 10px;
+
+        &__text {
+            width: 70%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            margin: 0;
+            padding: 3px;
+        }
+       
     }
 
     &__price {
         font-weight: 900;
-        padding: 20px;
-        position: absolute;
-        top: 20px;
-        right: 5px;
+               
     }
+
+    &__select {
+        visibility: hidden;
+        width: 0px;
+        
+        &:hover {
+            visibility: visible;
+            border-radius: 0 20px 20px 0;
+            background-color: $colour-tertiary;
+            height: 100%;
+            width: 60px;
+            
+        }
+    }
+
+    &__icon {
+        color: $colour-white;
+        font-size: $font-super-big;
+        padding: 20px;
+        }
+    
 
 }
 
@@ -311,9 +340,7 @@ a {
            &:hover {
                background-color: $colour-primary;
                opacity: 0.4;
-                + &__icon {
-               transform: color($colour-primary);
-                }
+                
             }
         }
     }
