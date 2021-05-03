@@ -42,6 +42,22 @@ $second-font: 'Shrikhand', sans-serif;
     align-items: center;
     }
 
+@mixin selection () {
+    &__explain {
+        width: 75%;
+    }
+
+    &__select {
+        width: 100%;
+        visibility: visible;
+        border-radius: 0 20px 20px 0;
+        background-color: $colour-tertiary;
+        height: 100%;
+        width: 60px;
+    }
+
+}
+
 @mixin page-display() {
 
     background-color: $colour-light-background;
@@ -73,6 +89,20 @@ $second-font: 'Shrikhand', sans-serif;
         border-radius: 20px;
         margin: 15px 0 0 0;
         position: relative;
+
+        &:hover {
+            .starter {
+                @include selection();
+            }
+
+            .main {
+                @include selection();
+            }
+            .desert {
+                @include selection();
+            }
+            
+        }
     }
 
     &__explain {
@@ -83,33 +113,40 @@ $second-font: 'Shrikhand', sans-serif;
     }
 
     &__name {
-        margin: 10px 0 0 10px;
-        word-break: break-all;
+        padding: 10px;
+        margin: 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
     }
 
-    &__compo {
-        
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: row;
-        margin: auto;
-        padding: 10px;
+    &__compo{
+        width: 100%;
+        height: 20px;
 
+       
+   
         &__text {
-            width: 70%;
+            display: inline;
+            float: left;
+            width: 85%;
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
-            margin: 0;
+            margin: 0 0 0 10px;
             padding: 3px;
         }
-       
     }
+       
+    
 
     &__price {
+        display: inline;
+        float: right;
+        align-items: center;
+        width: 5%;
         font-weight: 900;
-               
+        padding: 3px;
     }
 
     &__select {
@@ -463,7 +500,7 @@ a {
 
 .footer {
     width: 100%;
-    padding: 15px;
+    padding: 5px;
     background-color: $colour-dark-background;
     color: $colour-white;
     font-family: $main-font;
@@ -471,7 +508,7 @@ a {
     &__logo {
         font-family: $second-font;
         font-size: 17px;
-        padding: 15px;
+        padding: 30px 0 15px 45px;
         
     }
 
@@ -479,7 +516,7 @@ a {
         list-style: none;
         line-height: 30px;
         color: $colour-white;
-        padding-left: 10px;
+        padding-left: 25px;
         margin-top: 0;
 
         

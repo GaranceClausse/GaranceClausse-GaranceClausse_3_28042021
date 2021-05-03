@@ -306,7 +306,7 @@ a {
 /* Style du footer */
 .footer {
   width: 100%;
-  padding: 15px;
+  padding: 5px;
   background-color: #3a3838;
   color: #fff;
   font-family: "Roboto", sans-serif;
@@ -314,13 +314,13 @@ a {
 .footer__logo {
   font-family: "Shrikhand", sans-serif;
   font-size: 17px;
-  padding: 15px;
+  padding: 30px 0 15px 45px;
 }
 .footer__option {
   list-style: none;
   line-height: 30px;
   color: #fff;
-  padding-left: 10px;
+  padding-left: 25px;
   margin-top: 0;
 }
 .footer__icon {
@@ -422,33 +422,72 @@ a {
   margin: 15px 0 0 0;
   position: relative;
 }
+.starter__item:hover .starter__explain {
+  width: 75%;
+}
+.starter__item:hover .starter__select {
+  width: 100%;
+  visibility: visible;
+  border-radius: 0 20px 20px 0;
+  background-color: #99E2D0;
+  height: 100%;
+  width: 60px;
+}
+.starter__item:hover .main__explain {
+  width: 75%;
+}
+.starter__item:hover .main__select {
+  width: 100%;
+  visibility: visible;
+  border-radius: 0 20px 20px 0;
+  background-color: #99E2D0;
+  height: 100%;
+  width: 60px;
+}
+.starter__item:hover .desert__explain {
+  width: 75%;
+}
+.starter__item:hover .desert__select {
+  width: 100%;
+  visibility: visible;
+  border-radius: 0 20px 20px 0;
+  background-color: #99E2D0;
+  height: 100%;
+  width: 60px;
+}
 .starter__explain {
   padding-left: 10px;
   line-height: 15px;
   width: 90%;
 }
 .starter__name {
-  margin: 10px 0 0 10px;
-  word-break: break-all;
-}
-.starter__compo {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  margin: auto;
   padding: 10px;
-}
-.starter__compo__text {
-  width: 70%;
+  margin: 0;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  margin: 0;
+}
+.starter__compo {
+  width: 100%;
+  height: 20px;
+}
+.starter__compo__text {
+  display: inline;
+  float: left;
+  width: 85%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 0 0 10px;
   padding: 3px;
 }
 .starter__price {
+  display: inline;
+  float: right;
+  align-items: center;
+  width: 5%;
   font-weight: 900;
+  padding: 3px;
 }
 .starter__select {
   visibility: hidden;
@@ -498,33 +537,72 @@ a {
   margin: 15px 0 0 0;
   position: relative;
 }
+.main__item:hover .starter__explain {
+  width: 75%;
+}
+.main__item:hover .starter__select {
+  width: 100%;
+  visibility: visible;
+  border-radius: 0 20px 20px 0;
+  background-color: #99E2D0;
+  height: 100%;
+  width: 60px;
+}
+.main__item:hover .main__explain {
+  width: 75%;
+}
+.main__item:hover .main__select {
+  width: 100%;
+  visibility: visible;
+  border-radius: 0 20px 20px 0;
+  background-color: #99E2D0;
+  height: 100%;
+  width: 60px;
+}
+.main__item:hover .desert__explain {
+  width: 75%;
+}
+.main__item:hover .desert__select {
+  width: 100%;
+  visibility: visible;
+  border-radius: 0 20px 20px 0;
+  background-color: #99E2D0;
+  height: 100%;
+  width: 60px;
+}
 .main__explain {
   padding-left: 10px;
   line-height: 15px;
   width: 90%;
 }
 .main__name {
-  margin: 10px 0 0 10px;
-  word-break: break-all;
-}
-.main__compo {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  margin: auto;
   padding: 10px;
-}
-.main__compo__text {
-  width: 70%;
+  margin: 0;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  margin: 0;
+}
+.main__compo {
+  width: 100%;
+  height: 20px;
+}
+.main__compo__text {
+  display: inline;
+  float: left;
+  width: 85%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 0 0 10px;
   padding: 3px;
 }
 .main__price {
+  display: inline;
+  float: right;
+  align-items: center;
+  width: 5%;
   font-weight: 900;
+  padding: 3px;
 }
 .main__select {
   visibility: hidden;
@@ -574,33 +652,72 @@ a {
   margin: 15px 0 0 0;
   position: relative;
 }
+.desert__item:hover .starter__explain {
+  width: 75%;
+}
+.desert__item:hover .starter__select {
+  width: 100%;
+  visibility: visible;
+  border-radius: 0 20px 20px 0;
+  background-color: #99E2D0;
+  height: 100%;
+  width: 60px;
+}
+.desert__item:hover .main__explain {
+  width: 75%;
+}
+.desert__item:hover .main__select {
+  width: 100%;
+  visibility: visible;
+  border-radius: 0 20px 20px 0;
+  background-color: #99E2D0;
+  height: 100%;
+  width: 60px;
+}
+.desert__item:hover .desert__explain {
+  width: 75%;
+}
+.desert__item:hover .desert__select {
+  width: 100%;
+  visibility: visible;
+  border-radius: 0 20px 20px 0;
+  background-color: #99E2D0;
+  height: 100%;
+  width: 60px;
+}
 .desert__explain {
   padding-left: 10px;
   line-height: 15px;
   width: 90%;
 }
 .desert__name {
-  margin: 10px 0 0 10px;
-  word-break: break-all;
-}
-.desert__compo {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  margin: auto;
   padding: 10px;
-}
-.desert__compo__text {
-  width: 70%;
+  margin: 0;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  margin: 0;
+}
+.desert__compo {
+  width: 100%;
+  height: 20px;
+}
+.desert__compo__text {
+  display: inline;
+  float: left;
+  width: 85%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 0 0 10px;
   padding: 3px;
 }
 .desert__price {
+  display: inline;
+  float: right;
+  align-items: center;
+  width: 5%;
   font-weight: 900;
+  padding: 3px;
 }
 .desert__select {
   visibility: hidden;
