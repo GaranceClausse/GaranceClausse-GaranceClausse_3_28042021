@@ -89,6 +89,7 @@ $second-font: 'Shrikhand', sans-serif;
         border-radius: 20px;
         margin: 15px 0 0 0;
         position: relative;
+        
 
         &:hover {
             .starter {
@@ -155,7 +156,7 @@ $second-font: 'Shrikhand', sans-serif;
         border-radius: 0 20px 20px 0;
         background-color: $colour-tertiary;
         height: 100%;
-        transition: 400ms ease-in-out;
+        transition: 400ms ease-in-out 100ms;
              
         
         
@@ -170,6 +171,49 @@ $second-font: 'Shrikhand', sans-serif;
     
 
 }
+
+.first {
+    opacity:0;
+    -moz-animation: anim 3s ease-in-out forwards 50ms;
+    -webkit-animation: anim 3s ease-in-out forwards 50ms;
+    animation: anim 3s ease-in-out forwards 50ms;
+}
+
+.second {
+    opacity:0;
+    -moz-animation: anim 3s ease-in-out forwards 400ms;
+    -webkit-animation: anim 3s ease-in-out forwards 400ms;
+    animation: anim 3s ease-in-out forwards 400ms;
+}
+
+.third {
+    opacity:0;
+    -moz-animation: anim 3s ease-in-out forwards 1s;
+    -webkit-animation: anim 3s ease-in-out forwards 1s;
+    animation: anim 3s ease-in-out forwards 1s;
+}
+
+.fourth {
+    opacity:0;
+    -moz-animation: anim 3s ease-in-out forwards 1.2s;
+    -webkit-animation: anim 3s ease-in-out forwards 1.2s;
+    animation: anim 3s ease-in-out forwards 1.2s;
+}
+
+@-moz-keyframes anim {
+    0%  {opacity:0;}
+    100% {opacity:1;}
+ }
+ @-webkit-keyframes anim {
+    0%  {opacity:0;}
+    100% {opacity:1;}
+ }
+ @keyframes anim {
+    0%  {opacity:0;}
+    100% {opacity:1;}
+ }
+
+
 
 /* Style général de la page*/
 
@@ -536,16 +580,6 @@ a {
     flex-direction: column;
     
 }
-/*
-@media all and (min-width: 780px) {
-    #page {
-        flex-direction: row;
-        flex-wrap: wrap;
-        
-    
-    }
-}*/
-
 
 
         /* Picture + name */
