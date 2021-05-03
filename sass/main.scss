@@ -48,12 +48,12 @@ $second-font: 'Shrikhand', sans-serif;
     }
 
     &__select {
-        width: 100%;
         visibility: visible;
-        border-radius: 0 20px 20px 0;
-        background-color: $colour-tertiary;
-        height: 100%;
         width: 60px;
+    }
+
+    &__icon {
+        transform: rotate(360deg);
     }
 
 }
@@ -152,21 +152,20 @@ $second-font: 'Shrikhand', sans-serif;
     &__select {
         visibility: hidden;
         width: 0px;
+        border-radius: 0 20px 20px 0;
+        background-color: $colour-tertiary;
+        height: 100%;
+        transition: 400ms ease-in-out;
+             
         
-        &:hover {
-            visibility: visible;
-            border-radius: 0 20px 20px 0;
-            background-color: $colour-tertiary;
-            height: 100%;
-            width: 60px;
-            
-        }
+        
     }
 
     &__icon {
         color: $colour-white;
         font-size: $font-super-big;
         padding: 20px;
+        transition: transform 600ms ease-in-out 140ms;
         }
     
 

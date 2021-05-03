@@ -426,34 +426,31 @@ a {
   width: 75%;
 }
 .starter__item:hover .starter__select {
-  width: 100%;
   visibility: visible;
-  border-radius: 0 20px 20px 0;
-  background-color: #99E2D0;
-  height: 100%;
   width: 60px;
+}
+.starter__item:hover .starter__icon {
+  transform: rotate(360deg);
 }
 .starter__item:hover .main__explain {
   width: 75%;
 }
 .starter__item:hover .main__select {
-  width: 100%;
   visibility: visible;
-  border-radius: 0 20px 20px 0;
-  background-color: #99E2D0;
-  height: 100%;
   width: 60px;
+}
+.starter__item:hover .main__icon {
+  transform: rotate(360deg);
 }
 .starter__item:hover .desert__explain {
   width: 75%;
 }
 .starter__item:hover .desert__select {
-  width: 100%;
   visibility: visible;
-  border-radius: 0 20px 20px 0;
-  background-color: #99E2D0;
-  height: 100%;
   width: 60px;
+}
+.starter__item:hover .desert__icon {
+  transform: rotate(360deg);
 }
 .starter__explain {
   padding-left: 10px;
@@ -492,18 +489,16 @@ a {
 .starter__select {
   visibility: hidden;
   width: 0px;
-}
-.starter__select:hover {
-  visibility: visible;
   border-radius: 0 20px 20px 0;
   background-color: #99E2D0;
   height: 100%;
-  width: 60px;
+  transition: 400ms ease-in-out;
 }
 .starter__icon {
   color: #fff;
   font-size: 26px;
   padding: 20px;
+  transition: transform 600ms ease-in-out 140ms;
 }
 
 /* Style des palts : main */
@@ -541,34 +536,31 @@ a {
   width: 75%;
 }
 .main__item:hover .starter__select {
-  width: 100%;
   visibility: visible;
-  border-radius: 0 20px 20px 0;
-  background-color: #99E2D0;
-  height: 100%;
   width: 60px;
+}
+.main__item:hover .starter__icon {
+  transform: rotate(360deg);
 }
 .main__item:hover .main__explain {
   width: 75%;
 }
 .main__item:hover .main__select {
-  width: 100%;
   visibility: visible;
-  border-radius: 0 20px 20px 0;
-  background-color: #99E2D0;
-  height: 100%;
   width: 60px;
+}
+.main__item:hover .main__icon {
+  transform: rotate(360deg);
 }
 .main__item:hover .desert__explain {
   width: 75%;
 }
 .main__item:hover .desert__select {
-  width: 100%;
   visibility: visible;
-  border-radius: 0 20px 20px 0;
-  background-color: #99E2D0;
-  height: 100%;
   width: 60px;
+}
+.main__item:hover .desert__icon {
+  transform: rotate(360deg);
 }
 .main__explain {
   padding-left: 10px;
@@ -607,18 +599,16 @@ a {
 .main__select {
   visibility: hidden;
   width: 0px;
-}
-.main__select:hover {
-  visibility: visible;
   border-radius: 0 20px 20px 0;
   background-color: #99E2D0;
   height: 100%;
-  width: 60px;
+  transition: 400ms ease-in-out;
 }
 .main__icon {
   color: #fff;
   font-size: 26px;
   padding: 20px;
+  transition: transform 600ms ease-in-out 140ms;
 }
 
 /* Style des desserts : desert */
@@ -656,34 +646,31 @@ a {
   width: 75%;
 }
 .desert__item:hover .starter__select {
-  width: 100%;
   visibility: visible;
-  border-radius: 0 20px 20px 0;
-  background-color: #99E2D0;
-  height: 100%;
   width: 60px;
+}
+.desert__item:hover .starter__icon {
+  transform: rotate(360deg);
 }
 .desert__item:hover .main__explain {
   width: 75%;
 }
 .desert__item:hover .main__select {
-  width: 100%;
   visibility: visible;
-  border-radius: 0 20px 20px 0;
-  background-color: #99E2D0;
-  height: 100%;
   width: 60px;
+}
+.desert__item:hover .main__icon {
+  transform: rotate(360deg);
 }
 .desert__item:hover .desert__explain {
   width: 75%;
 }
 .desert__item:hover .desert__select {
-  width: 100%;
   visibility: visible;
-  border-radius: 0 20px 20px 0;
-  background-color: #99E2D0;
-  height: 100%;
   width: 60px;
+}
+.desert__item:hover .desert__icon {
+  transform: rotate(360deg);
 }
 .desert__explain {
   padding-left: 10px;
@@ -722,18 +709,16 @@ a {
 .desert__select {
   visibility: hidden;
   width: 0px;
-}
-.desert__select:hover {
-  visibility: visible;
   border-radius: 0 20px 20px 0;
   background-color: #99E2D0;
   height: 100%;
-  width: 60px;
+  transition: 400ms ease-in-out;
 }
 .desert__icon {
   color: #fff;
   font-size: 26px;
   padding: 20px;
+  transition: transform 600ms ease-in-out 140ms;
 }
 
 /* Style du bouton de commande : order__button */
