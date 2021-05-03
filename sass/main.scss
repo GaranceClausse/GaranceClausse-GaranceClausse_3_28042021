@@ -42,6 +42,22 @@ $second-font: 'Shrikhand', sans-serif;
     align-items: center;
     }
 
+@mixin selection () {
+    &__explain {
+        width: 75%;
+    }
+
+    &__select {
+        width: 100%;
+        visibility: visible;
+        border-radius: 0 20px 20px 0;
+        background-color: $colour-tertiary;
+        height: 100%;
+        width: 60px;
+    }
+
+}
+
 @mixin page-display() {
 
     background-color: $colour-light-background;
@@ -73,6 +89,20 @@ $second-font: 'Shrikhand', sans-serif;
         border-radius: 20px;
         margin: 15px 0 0 0;
         position: relative;
+
+        &:hover {
+            .starter {
+                @include selection();
+            }
+
+            .main {
+                @include selection();
+            }
+            .desert {
+                @include selection();
+            }
+            
+        }
     }
 
     &__explain {
@@ -83,26 +113,62 @@ $second-font: 'Shrikhand', sans-serif;
     }
 
     &__name {
-        margin: 5px 0;
-        word-break: break-all;
-    }
-
-    &__compo {
-        width: 90%;
+        padding: 10px;
+        margin: 0;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
-        margin: 0;
-        padding: 7px 0;
     }
 
-    &__price {
-        font-weight: 900;
-        padding: 20px;
-        position: absolute;
-        top: 20px;
-        right: 5px;
+    &__compo{
+        width: 100%;
+        height: 20px;
+
+       
+   
+        &__text {
+            display: inline;
+            float: left;
+            width: 85%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            margin: 0 0 0 10px;
+            padding: 3px;
+        }
     }
+       
+    
+
+    &__price {
+        display: inline;
+        float: right;
+        align-items: center;
+        width: 5%;
+        font-weight: 900;
+        padding: 3px;
+    }
+
+    &__select {
+        visibility: hidden;
+        width: 0px;
+        
+        &:hover {
+            visibility: visible;
+            border-radius: 0 20px 20px 0;
+            background-color: $colour-tertiary;
+            height: 100%;
+            width: 60px;
+            
+        }
+    }
+
+    &__icon {
+        color: $colour-white;
+        font-size: $font-super-big;
+        padding: 20px;
+        }
+    
 
 }
 
@@ -311,9 +377,7 @@ a {
            &:hover {
                background-color: $colour-primary;
                opacity: 0.4;
-                + &__icon {
-               transform: color($colour-primary);
-                }
+                
             }
         }
     }
@@ -436,7 +500,7 @@ a {
 
 .footer {
     width: 100%;
-    padding: 15px;
+    padding: 5px;
     background-color: $colour-dark-background;
     color: $colour-white;
     font-family: $main-font;
@@ -444,7 +508,7 @@ a {
     &__logo {
         font-family: $second-font;
         font-size: 17px;
-        padding: 15px;
+        padding: 30px 0 15px 45px;
         
     }
 
@@ -452,7 +516,7 @@ a {
         list-style: none;
         line-height: 30px;
         color: $colour-white;
-        padding-left: 10px;
+        padding-left: 25px;
         margin-top: 0;
 
         
