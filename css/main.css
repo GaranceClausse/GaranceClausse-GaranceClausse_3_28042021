@@ -96,7 +96,7 @@ a {
   justify-content: center;
   align-items: center;
   width: 100%;
-  box-shadow: 5px 5px 10px #f0eeee;
+  box-shadow: 5px 5px 10px #d3d1d1;
   margin: 0;
 }
 .header__logo {
@@ -198,11 +198,18 @@ a {
   height: 50px;
   width: 230px;
   color: #fff;
-  background-image: linear-gradient(#FF79DA, #9356DC);
-  background-image: -webkit-linear-gradient(#FF79DA, #9356DC);
+  background-image: linear-gradient(175deg, #FF79DA, #9356DC);
+  background-image: -webkit- linear-gradient(175deg, #FF79DA, #9356DC);
   border: none;
   border-radius: 35px;
+  opacity: 1;
+  transform: opacity(1);
+  transition: all 200ms ease-in;
   box-shadow: 5px 5px 10px #d3d1d1;
+}
+.button:active {
+  box-shadow: 10px 8px 10px #3a3838;
+  /*opacity: 0.7;*/
 }
 
 /* Style de fonctionnement : work */
@@ -315,7 +322,7 @@ a {
   border-radius: 20px;
   background-color: white;
   padding-bottom: 5px;
-  box-shadow: 5px 5px 10px #949393;
+  box-shadow: 5px 5px 10px #d3d1d1;
 }
 .restaurant__pic {
   width: 330px;
@@ -348,6 +355,7 @@ a {
   color: #9b9a9a;
 }
 .restaurant__love--big {
+  color: #9b9a9a;
   padding: 0 0 7px 0;
   font-size: 26px;
 }
@@ -368,12 +376,22 @@ a {
   font-size: 17px;
   padding: 30px 0 15px 45px;
 }
+@media all and (min-width: 768px) {
+  .footer__logo {
+    text-align: center;
+  }
+}
 .footer__option {
   list-style: none;
   line-height: 30px;
   color: #fff;
   padding-left: 25px;
   margin-top: 0;
+}
+@media all and (min-width: 768px) {
+  .footer__option {
+    text-align: center;
+  }
 }
 .footer__icon {
   padding-right: 5px;
@@ -460,7 +478,7 @@ a {
   background-color: #fff;
   width: 360px;
   height: 70px;
-  box-shadow: 5px 5px 10px #3a3838;
+  box-shadow: 5px 5px 10px #d3d1d1;
   border-radius: 20px;
   margin: 15px 0 0 0;
   position: relative;
@@ -469,8 +487,8 @@ a {
   width: 75%;
 }
 .starter__item:hover .starter__select {
-  visibility: visible;
-  width: 60px;
+  opacity: 1;
+  transform: scaleX(1);
 }
 .starter__item:hover .starter__icon {
   transform: rotate(360deg);
@@ -479,8 +497,8 @@ a {
   width: 75%;
 }
 .starter__item:hover .main__select {
-  visibility: visible;
-  width: 60px;
+  opacity: 1;
+  transform: scaleX(1);
 }
 .starter__item:hover .main__icon {
   transform: rotate(360deg);
@@ -489,8 +507,8 @@ a {
   width: 75%;
 }
 .starter__item:hover .desert__select {
-  visibility: visible;
-  width: 60px;
+  opacity: 1;
+  transform: scaleX(1);
 }
 .starter__item:hover .desert__icon {
   transform: rotate(360deg);
@@ -530,12 +548,13 @@ a {
   padding: 3px;
 }
 .starter__select {
-  visibility: hidden;
-  width: 0px;
   border-radius: 0 20px 20px 0;
   background-color: #99E2D0;
   height: 100%;
-  transition: 400ms ease-in-out 100ms;
+  opacity: 0;
+  transform: scaleX(0.2);
+  transform-origin: right;
+  transition: all 400ms ease-in-out 150ms;
 }
 .starter__icon {
   color: #fff;
@@ -570,7 +589,7 @@ a {
   background-color: #fff;
   width: 360px;
   height: 70px;
-  box-shadow: 5px 5px 10px #3a3838;
+  box-shadow: 5px 5px 10px #d3d1d1;
   border-radius: 20px;
   margin: 15px 0 0 0;
   position: relative;
@@ -579,8 +598,8 @@ a {
   width: 75%;
 }
 .main__item:hover .starter__select {
-  visibility: visible;
-  width: 60px;
+  opacity: 1;
+  transform: scaleX(1);
 }
 .main__item:hover .starter__icon {
   transform: rotate(360deg);
@@ -589,8 +608,8 @@ a {
   width: 75%;
 }
 .main__item:hover .main__select {
-  visibility: visible;
-  width: 60px;
+  opacity: 1;
+  transform: scaleX(1);
 }
 .main__item:hover .main__icon {
   transform: rotate(360deg);
@@ -599,8 +618,8 @@ a {
   width: 75%;
 }
 .main__item:hover .desert__select {
-  visibility: visible;
-  width: 60px;
+  opacity: 1;
+  transform: scaleX(1);
 }
 .main__item:hover .desert__icon {
   transform: rotate(360deg);
@@ -640,12 +659,13 @@ a {
   padding: 3px;
 }
 .main__select {
-  visibility: hidden;
-  width: 0px;
   border-radius: 0 20px 20px 0;
   background-color: #99E2D0;
   height: 100%;
-  transition: 400ms ease-in-out 100ms;
+  opacity: 0;
+  transform: scaleX(0.2);
+  transform-origin: right;
+  transition: all 400ms ease-in-out 150ms;
 }
 .main__icon {
   color: #fff;
@@ -680,7 +700,7 @@ a {
   background-color: #fff;
   width: 360px;
   height: 70px;
-  box-shadow: 5px 5px 10px #3a3838;
+  box-shadow: 5px 5px 10px #d3d1d1;
   border-radius: 20px;
   margin: 15px 0 0 0;
   position: relative;
@@ -689,8 +709,8 @@ a {
   width: 75%;
 }
 .desert__item:hover .starter__select {
-  visibility: visible;
-  width: 60px;
+  opacity: 1;
+  transform: scaleX(1);
 }
 .desert__item:hover .starter__icon {
   transform: rotate(360deg);
@@ -699,8 +719,8 @@ a {
   width: 75%;
 }
 .desert__item:hover .main__select {
-  visibility: visible;
-  width: 60px;
+  opacity: 1;
+  transform: scaleX(1);
 }
 .desert__item:hover .main__icon {
   transform: rotate(360deg);
@@ -709,8 +729,8 @@ a {
   width: 75%;
 }
 .desert__item:hover .desert__select {
-  visibility: visible;
-  width: 60px;
+  opacity: 1;
+  transform: scaleX(1);
 }
 .desert__item:hover .desert__icon {
   transform: rotate(360deg);
@@ -750,12 +770,13 @@ a {
   padding: 3px;
 }
 .desert__select {
-  visibility: hidden;
-  width: 0px;
   border-radius: 0 20px 20px 0;
   background-color: #99E2D0;
   height: 100%;
-  transition: 400ms ease-in-out 100ms;
+  opacity: 0;
+  transform: scaleX(0.2);
+  transform-origin: right;
+  transition: all 400ms ease-in-out 150ms;
 }
 .desert__icon {
   color: #fff;
@@ -776,29 +797,34 @@ a {
 
 /* Effets et animations */
 .fa-heart {
-  border-radius: 50%;
-  padding: 0.2em;
+  color: #d3d1d1;
+  -webkit-transition: color 1000ms linear;
+  transition: color 1000ms linear;
+}
+.fa-heart:hover {
+  color: #9356DC;
 }
 
-.fa-heart::before {
-  content: "";
-  font-weight: bold;
-  transition: color 1s ease-out;
-  background: #d3d1d1;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+/*.fa-heart::before {
+
+    font-weight: bold;
+    transition: color 1s ease-out;
+    background: $colour-midark-background;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+   -webkit-text-fill-color: transparent;
 }
 
-.fa-heart:hover::before {
-  background: -webkit-linear-gradient(top right, #9356DC, #FF79DA 70%);
-  background: linear-gradient(to bottom left, #9356DC, #FF79DA 70%);
-  background: -moz-linear-gradient(top right, #9356DC, #FF79DA 70%);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: -webkit-linear-gradient(top, #FF79DA, #9356DC);
-}
+.fa-heart:hover::before{
+    background:-webkit-linear-gradient(top right, $colour-primary, $colour-secondary 70%);
+    background: linear-gradient(to bottom left, $colour-primary,  $colour-secondary 70%);
+    background:-moz-linear-gradient(top right, $colour-primary, $colour-secondary 70%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+   -webkit-text-fill-color:-webkit-linear-gradient(top, $colour-secondary, $colour-primary);
+
+}*/
 
 /*# sourceMappingURL=main.css.map */
