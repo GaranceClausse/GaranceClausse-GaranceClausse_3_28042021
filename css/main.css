@@ -209,7 +209,7 @@ a {
 }
 .button:active {
   box-shadow: 10px 8px 10px #3a3838;
-  /*opacity: 0.7;*/
+  opacity: 0.8;
 }
 
 /* Style de fonctionnement : work */
@@ -260,6 +260,7 @@ a {
   padding: 25px;
   box-shadow: 5px 5px 10px #d3d1d1;
   border-radius: 20px;
+  transition: background-color 300ms ease-in;
 }
 .work__bar--text:hover {
   background-color: #9356DC;
@@ -282,6 +283,11 @@ a {
 }
 
 /*Style de l'encart restaurant*/
+.btn {
+  border: none;
+  padding: 0;
+}
+
 .restaurant {
   background-color: #f0eeee;
   width: 100%;
@@ -438,7 +444,6 @@ a {
   margin: 0;
 }
 
-/* Style de entrées : starters */
 .dish {
   width: 100%;
   display: flex;
@@ -453,6 +458,7 @@ a {
   }
 }
 
+/* Style de entrées : starters */
 .starter {
   background-color: #f0eeee;
 }
@@ -484,7 +490,7 @@ a {
   position: relative;
 }
 .starter__item:hover .starter__explain {
-  width: 75%;
+  width: 65%;
 }
 .starter__item:hover .starter__select {
   opacity: 1;
@@ -493,8 +499,14 @@ a {
 .starter__item:hover .starter__icon {
   transform: rotate(360deg);
 }
-.starter__item:hover .main__explain {
+.starter__item:hover .starter__price {
+  transform: translateX(-40px);
+}
+.starter__item:hover .starter__compo__text {
   width: 75%;
+}
+.starter__item:hover .main__explain {
+  width: 65%;
 }
 .starter__item:hover .main__select {
   opacity: 1;
@@ -503,8 +515,14 @@ a {
 .starter__item:hover .main__icon {
   transform: rotate(360deg);
 }
-.starter__item:hover .desert__explain {
+.starter__item:hover .main__price {
+  transform: translateX(-40px);
+}
+.starter__item:hover .main__compo__text {
   width: 75%;
+}
+.starter__item:hover .desert__explain {
+  width: 65%;
 }
 .starter__item:hover .desert__select {
   opacity: 1;
@@ -513,10 +531,17 @@ a {
 .starter__item:hover .desert__icon {
   transform: rotate(360deg);
 }
+.starter__item:hover .desert__price {
+  transform: translateX(-40px);
+}
+.starter__item:hover .desert__compo__text {
+  width: 75%;
+}
 .starter__explain {
   padding-left: 10px;
   line-height: 15px;
   width: 90%;
+  transition: all 300ms ease-out 80ms;
 }
 .starter__name {
   padding: 10px;
@@ -526,7 +551,7 @@ a {
   white-space: nowrap;
 }
 .starter__compo {
-  width: 100%;
+  width: 310px;
   height: 20px;
 }
 .starter__compo__text {
@@ -538,14 +563,17 @@ a {
   white-space: nowrap;
   margin: 0 0 0 10px;
   padding: 3px;
+  transition: all 300ms ease-out 80ms;
 }
 .starter__price {
   display: inline;
   float: right;
   align-items: center;
+  justify-self: flex-end;
   width: 5%;
   font-weight: 900;
-  padding: 3px;
+  padding: 3px 3px 3px 8px;
+  transition: all 400ms ease-in-out 130ms;
 }
 .starter__select {
   border-radius: 0 20px 20px 0;
@@ -595,7 +623,7 @@ a {
   position: relative;
 }
 .main__item:hover .starter__explain {
-  width: 75%;
+  width: 65%;
 }
 .main__item:hover .starter__select {
   opacity: 1;
@@ -604,8 +632,14 @@ a {
 .main__item:hover .starter__icon {
   transform: rotate(360deg);
 }
-.main__item:hover .main__explain {
+.main__item:hover .starter__price {
+  transform: translateX(-40px);
+}
+.main__item:hover .starter__compo__text {
   width: 75%;
+}
+.main__item:hover .main__explain {
+  width: 65%;
 }
 .main__item:hover .main__select {
   opacity: 1;
@@ -614,8 +648,14 @@ a {
 .main__item:hover .main__icon {
   transform: rotate(360deg);
 }
-.main__item:hover .desert__explain {
+.main__item:hover .main__price {
+  transform: translateX(-40px);
+}
+.main__item:hover .main__compo__text {
   width: 75%;
+}
+.main__item:hover .desert__explain {
+  width: 65%;
 }
 .main__item:hover .desert__select {
   opacity: 1;
@@ -624,10 +664,17 @@ a {
 .main__item:hover .desert__icon {
   transform: rotate(360deg);
 }
+.main__item:hover .desert__price {
+  transform: translateX(-40px);
+}
+.main__item:hover .desert__compo__text {
+  width: 75%;
+}
 .main__explain {
   padding-left: 10px;
   line-height: 15px;
   width: 90%;
+  transition: all 300ms ease-out 80ms;
 }
 .main__name {
   padding: 10px;
@@ -637,7 +684,7 @@ a {
   white-space: nowrap;
 }
 .main__compo {
-  width: 100%;
+  width: 310px;
   height: 20px;
 }
 .main__compo__text {
@@ -649,14 +696,17 @@ a {
   white-space: nowrap;
   margin: 0 0 0 10px;
   padding: 3px;
+  transition: all 300ms ease-out 80ms;
 }
 .main__price {
   display: inline;
   float: right;
   align-items: center;
+  justify-self: flex-end;
   width: 5%;
   font-weight: 900;
-  padding: 3px;
+  padding: 3px 3px 3px 8px;
+  transition: all 400ms ease-in-out 130ms;
 }
 .main__select {
   border-radius: 0 20px 20px 0;
@@ -706,7 +756,7 @@ a {
   position: relative;
 }
 .desert__item:hover .starter__explain {
-  width: 75%;
+  width: 65%;
 }
 .desert__item:hover .starter__select {
   opacity: 1;
@@ -715,8 +765,14 @@ a {
 .desert__item:hover .starter__icon {
   transform: rotate(360deg);
 }
-.desert__item:hover .main__explain {
+.desert__item:hover .starter__price {
+  transform: translateX(-40px);
+}
+.desert__item:hover .starter__compo__text {
   width: 75%;
+}
+.desert__item:hover .main__explain {
+  width: 65%;
 }
 .desert__item:hover .main__select {
   opacity: 1;
@@ -725,8 +781,14 @@ a {
 .desert__item:hover .main__icon {
   transform: rotate(360deg);
 }
-.desert__item:hover .desert__explain {
+.desert__item:hover .main__price {
+  transform: translateX(-40px);
+}
+.desert__item:hover .main__compo__text {
   width: 75%;
+}
+.desert__item:hover .desert__explain {
+  width: 65%;
 }
 .desert__item:hover .desert__select {
   opacity: 1;
@@ -735,10 +797,17 @@ a {
 .desert__item:hover .desert__icon {
   transform: rotate(360deg);
 }
+.desert__item:hover .desert__price {
+  transform: translateX(-40px);
+}
+.desert__item:hover .desert__compo__text {
+  width: 75%;
+}
 .desert__explain {
   padding-left: 10px;
   line-height: 15px;
   width: 90%;
+  transition: all 300ms ease-out 80ms;
 }
 .desert__name {
   padding: 10px;
@@ -748,7 +817,7 @@ a {
   white-space: nowrap;
 }
 .desert__compo {
-  width: 100%;
+  width: 310px;
   height: 20px;
 }
 .desert__compo__text {
@@ -760,14 +829,17 @@ a {
   white-space: nowrap;
   margin: 0 0 0 10px;
   padding: 3px;
+  transition: all 300ms ease-out 80ms;
 }
 .desert__price {
   display: inline;
   float: right;
   align-items: center;
+  justify-self: flex-end;
   width: 5%;
   font-weight: 900;
-  padding: 3px;
+  padding: 3px 3px 3px 8px;
+  transition: all 400ms ease-in-out 130ms;
 }
 .desert__select {
   border-radius: 0 20px 20px 0;
@@ -797,12 +869,16 @@ a {
 
 /* Effets et animations */
 .fa-heart {
-  color: #d3d1d1;
-  -webkit-transition: color 1000ms linear;
-  transition: color 1000ms linear;
+  background: #d3d1d1;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /*-webkit-transition: background 1000ms linear;
+  transition: background 1000ms linear;*/
 }
 .fa-heart:hover {
-  color: #9356DC;
+  -webkit-text-fill-color: linear-gradient(175deg, #FF79DA, #9356DC);
 }
 
 /*.fa-heart::before {
