@@ -22,6 +22,7 @@ $colour-light-background: #f0eeee;
 $colour-midark-background: #d3d1d1;
 $colour-dark-background: #3a3838;
 $colour-dark: #9b9a9a;
+$button-color:  linear-gradient(175deg, $colour-secondary, $colour-primary);
 
 $font-super-big: 26px;
 $font-big: 23px;
@@ -42,14 +43,22 @@ $second-font: 'Shrikhand', sans-serif;
     align-items: center;
     }
 
+@mixin box-shadow {
+    box-shadow: 5px 5px 10px $colour-midark-background;
+}
+
+@mixin large-box-shadow {
+    box-shadow: 10px 8px 10px $colour-dark-background;
+}
+
 @mixin selection () {
     &__explain {
         width: 75%;
     }
 
     &__select {
-        visibility: visible;
-        width: 60px;
+        opacity: 1;
+        transform: scaleX(1);
     }
 
     &__icon {
@@ -57,6 +66,7 @@ $second-font: 'Shrikhand', sans-serif;
     }
 
 }
+
 
 @mixin page-display() {
 
@@ -85,7 +95,7 @@ $second-font: 'Shrikhand', sans-serif;
         background-color: $colour-white;
         width: 360px;
         height: 70px;
-        box-shadow: 5px 5px 10px $colour-dark-background;
+        @include box-shadow;
         border-radius: 20px;
         margin: 15px 0 0 0;
         position: relative;
@@ -151,15 +161,14 @@ $second-font: 'Shrikhand', sans-serif;
     }
 
     &__select {
-        visibility: hidden;
-        width: 0px;
+        
         border-radius: 0 20px 20px 0;
         background-color: $colour-tertiary;
         height: 100%;
-        transition: 400ms ease-in-out 100ms;
-             
-        
-        
+        opacity: 0;
+        transform: scaleX(0.2);
+        transform-origin: right;
+        transition: all 400ms ease-in-out 150ms;
     }
 
     &__icon {
@@ -172,6 +181,8 @@ $second-font: 'Shrikhand', sans-serif;
 
 }
 
+
+    
 .first {
     opacity:0;
     -moz-animation: anim 3s ease-in-out forwards 50ms;
@@ -245,7 +256,7 @@ a {
     height: 70px;
     @include flex-center();
     width: 100%;
-    box-shadow: 5px 5px 10px $colour-light-background;
+    @include box-shadow;
     margin: 0;
 
     &__logo {
@@ -352,6 +363,10 @@ a {
 
 
 /* Style du boutton : button*/
+@mixin button-faded-color($colour: $colour-primary){
+    @if (button:active){
+        $colour: lighten($colour, 70%);
+    }}
 
 .button {
     font-style: $main-font;
@@ -360,11 +375,19 @@ a {
     height: 50px;
     width: 230px;
     color: $colour-white;
-    background-image: linear-gradient($colour-secondary, $colour-primary);
-    background-image: -webkit-linear-gradient($colour-secondary, $colour-primary);
+    background-image: $button-color;
+    background-image: -webkit-$button-color;
     border: none;
     border-radius: 35px;
-    box-shadow: 5px 5px 10px $colour-midark-background;
+    opacity: 1;
+    transform: opacity(1);
+    transition: all 200ms ease-in;
+    @include box-shadow;
+    &:active {
+        @include large-box-shadow();
+        @include button-faded-color();
+        /*opacity: 0.7;*/
+    }
 }
 
 
@@ -414,7 +437,7 @@ a {
            margin: 0;
            background-color: $colour-light-background;
            padding: 25px;
-           box-shadow: 5px 5px 10px $colour-midark-background;
+           @include box-shadow;
            border-radius: 20px;
 
            &:hover {
@@ -486,7 +509,7 @@ a {
         border-radius: 20px;
         background-color: white;
         padding-bottom: 5px;
-        box-shadow: 5px 5px 10px #949393;
+        @include box-shadow;
     }
 
     &__pic {
@@ -526,9 +549,11 @@ a {
         color: $colour-dark;
 
         &--big {
+            color: $colour-dark;
             padding: 0 0 7px 0;
             font-size: $font-super-big;
         }
+        
     }
 
     &__ancre {
@@ -548,10 +573,16 @@ a {
     color: $colour-white;
     font-family: $main-font;
 
+    
+
+
     &__logo {
         font-family: $second-font;
         font-size: 17px;
         padding: 30px 0 15px 45px;
+        @media all and (min-width:768px) {
+            text-align: center;
+        }
         
     }
 
@@ -561,6 +592,9 @@ a {
         color: $colour-white;
         padding-left: 25px;
         margin-top: 0;
+        @media all and (min-width:768px) {
+            text-align: center;
+        }
 
         
     }
@@ -670,11 +704,21 @@ a {
 /* Effets et animations */
 
 .fa-heart {
-    border-radius: 50%;
-    padding:.2em;
+    color: $colour-midark-background;
+
+    -webkit-transition: color 1000ms linear;
+    transition: color 1000ms linear;
+
+    &:hover {
+        color: $colour-primary;
+    }
+    
+    
+
+    
 }
-.fa-heart::before {
-    content: "\f004";
+/*.fa-heart::before {
+    
     font-weight: bold;
     transition: color 1s ease-out;
     background: $colour-midark-background;
@@ -693,5 +737,5 @@ a {
     background-clip: text;
    -webkit-text-fill-color:-webkit-linear-gradient(top, $colour-secondary, $colour-primary);
     
-}
+}*/
 
