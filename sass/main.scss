@@ -30,10 +30,6 @@ $font-medium: 16px;
 $font-small: 12px;
 
 
-$heading-shadow-size: .55rem;
-$layout-margin: 6rem;
-$grid-gutter: $layout-margin * .25;
-
 $main-font: 'Roboto', sans-serif;
 $second-font: 'Shrikhand', sans-serif;
 
@@ -51,9 +47,13 @@ $second-font: 'Shrikhand', sans-serif;
     box-shadow: 10px 8px 10px $colour-dark-background;
 }
 
+@mixin linear-gradient {
+    background: linear-gradient(175deg, $colour-secondary, $colour-primary);
+}
+
 @mixin selection () {
     &__explain {
-        width: 75%;
+        width: 65%;
     }
 
     &__select {
@@ -63,6 +63,14 @@ $second-font: 'Shrikhand', sans-serif;
 
     &__icon {
         transform: rotate(360deg);
+    }
+
+    &__price {
+        transform: translateX(-40px);
+    }
+
+    &__compo__text {
+        width: 75%;
     }
 
 }
@@ -120,6 +128,7 @@ $second-font: 'Shrikhand', sans-serif;
         padding-left: 10px;
         line-height: 15px;
         width: 90%;
+        transition: all 300ms ease-out 80ms;
         
     }
 
@@ -132,8 +141,9 @@ $second-font: 'Shrikhand', sans-serif;
     }
 
     &__compo{
-        width: 100%;
+        width: 310px;
         height: 20px;
+        
 
        
    
@@ -146,6 +156,7 @@ $second-font: 'Shrikhand', sans-serif;
             white-space: nowrap;
             margin: 0 0 0 10px;
             padding: 3px;
+            transition: all 300ms ease-out 80ms;
         }
     }
        
@@ -155,9 +166,12 @@ $second-font: 'Shrikhand', sans-serif;
         display: inline;
         float: right;
         align-items: center;
+        justify-self: flex-end;
         width: 5%;
         font-weight: 900;
-        padding: 3px;
+        padding: 3px 3px 3px 8px;
+        transition: all 400ms ease-in-out 130ms;
+        
     }
 
     &__select {
@@ -386,7 +400,7 @@ a {
     &:active {
         @include large-box-shadow();
         @include button-faded-color();
-        /*opacity: 0.7;*/
+        opacity: 0.8;
     }
 }
 
@@ -439,10 +453,14 @@ a {
            padding: 25px;
            @include box-shadow;
            border-radius: 20px;
+           transition: background-color 300ms ease-in;
 
            &:hover {
-               background-color: $colour-primary;
-               opacity: 0.4;
+               background-color: lighten($colour-secondary, 20%);
+                  .work__icon {
+                   color: $colour-primary;
+                   
+               }
                 
             }
         }
@@ -467,6 +485,12 @@ a {
 }
 
 /*Style de l'encart restaurant*/
+
+.btn {
+    border: none;
+    padding: 0;
+       
+}
 
 
 .restaurant {
@@ -544,15 +568,7 @@ a {
     }
 
     &__love {
-        font-size: $font-big;
-        padding: 15px 25px 15px 0;
-        color: $colour-dark;
-
-        &--big {
-            color: $colour-dark;
-            padding: 0 0 7px 0;
-            font-size: $font-super-big;
-        }
+        
         
     }
 
@@ -656,7 +672,7 @@ a {
 }
 
 
-    /* Style de entrées : starters */
+    
 
 .dish {
     width: 100%;
@@ -668,6 +684,8 @@ a {
         flex-wrap: wrap;
     }
 }
+
+/* Style de entrées : starters */
 
 .starter {
     @include page-display();
@@ -704,19 +722,57 @@ a {
 /* Effets et animations */
 
 .fa-heart {
-    color: $colour-midark-background;
+    font-size: $font-big;
+    padding: 15px 25px 15px 0;
+    color: $colour-dark;
+    position: absolute;
+    overflow: hidden;
+    right: 32px;
+    bottom: 3px;
 
-    -webkit-transition: color 1000ms linear;
-    transition: color 1000ms linear;
-
-    &:hover {
-        color: $colour-primary;
+    &--big {
+        color: $colour-dark;
+        font-size: $font-super-big;
+        padding-bottom: 7px;
     }
-    
-    
+}
 
+.first-heart {
+    z-index: 1;
+    opacity: 1;
+    transition: all 400ms ease-out;
+}
+
+.hover-heart {
+    opacity: 0;
+    position: absolute;
+    right: 35px;
+    bottom: 22px;
+    z-index: 2;
+    overflow: hidden;
+
+    &--big {
+        right: 42px;
+        bottom: 3px;
+    }
+
+&:hover {
+    @include linear-gradient();
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    opacity: 1;
+    transform: translateX(10px);
+    transition: all 400ms ease-out;
+    .first-heart {
+        opacity: 0;
+        
+    }
+}
     
 }
+
+
+
 /*.fa-heart::before {
     
     font-weight: bold;
