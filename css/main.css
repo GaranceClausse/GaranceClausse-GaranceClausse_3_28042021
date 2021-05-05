@@ -263,7 +263,7 @@ a {
   transition: background-color 300ms ease-in;
 }
 .work__bar--text:hover {
-  background-color: #ffdff6;
+  background-color: #e4d5f6;
 }
 .work__bar--text:hover .work__icon {
   color: #9356DC;
@@ -860,19 +860,22 @@ a {
 }
 
 /* Effets et animations */
+.restaurant__love {
+  position: relative;
+}
+
 .fa-heart {
+  color: #9b9a9a;
   font-size: 23px;
   padding: 15px 25px 15px 0;
-  color: #9b9a9a;
-  position: absolute;
   overflow: hidden;
-  right: 32px;
-  bottom: 3px;
 }
 .fa-heart--big {
-  color: #9b9a9a;
   font-size: 26px;
   padding-bottom: 7px;
+  position: absolute;
+  right: 32px;
+  bottom: 3px;
 }
 
 .first-heart {
@@ -884,8 +887,8 @@ a {
 .hover-heart {
   opacity: 0;
   position: absolute;
-  right: 35px;
-  bottom: 22px;
+  right: 10px;
+  bottom: 9px;
   z-index: 2;
   overflow: hidden;
 }

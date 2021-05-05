@@ -456,7 +456,7 @@ a {
            transition: background-color 300ms ease-in;
 
            &:hover {
-               background-color: lighten($colour-secondary, 20%);
+               background-color: lighten($colour-primary, 30%);
                   .work__icon {
                    color: $colour-primary;
                    
@@ -721,19 +721,23 @@ a {
 
 /* Effets et animations */
 
+.restaurant__love {
+    position: relative;
+}
+
 .fa-heart {
+
+    color: $colour-dark;
     font-size: $font-big;
     padding: 15px 25px 15px 0;
-    color: $colour-dark;
-    position: absolute;
     overflow: hidden;
-    right: 32px;
-    bottom: 3px;
-
+    
     &--big {
-        color: $colour-dark;
         font-size: $font-super-big;
         padding-bottom: 7px;
+        position: absolute;
+        right: 32px;
+        bottom: 3px;
     }
 }
 
@@ -746,8 +750,8 @@ a {
 .hover-heart {
     opacity: 0;
     position: absolute;
-    right: 35px;
-    bottom: 22px;
+    right: 10px;
+    bottom: 9px;
     z-index: 2;
     overflow: hidden;
 
