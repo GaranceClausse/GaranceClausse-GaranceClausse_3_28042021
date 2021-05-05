@@ -263,7 +263,7 @@ a {
   transition: background-color 300ms ease-in;
 }
 .work__bar--text:hover {
-  background-color: #ffdff6;
+  background-color: #e4d5f6;
 }
 .work__bar--text:hover .work__icon {
   color: #9356DC;

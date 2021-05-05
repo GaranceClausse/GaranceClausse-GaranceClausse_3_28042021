@@ -456,7 +456,7 @@ a {
            transition: background-color 300ms ease-in;
 
            &:hover {
-               background-color: lighten($colour-secondary, 20%);
+               background-color: lighten($colour-primary, 30%);
                   .work__icon {
                    color: $colour-primary;
                    
