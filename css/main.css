@@ -196,7 +196,7 @@ a {
   font-size: 16px;
   font-weight: 600;
   height: 50px;
-  width: 230px;
+  width: 210px;
   color: #fff;
   background-image: linear-gradient(175deg, #FF79DA, #9356DC);
   background-image: -webkit- linear-gradient(175deg, #FF79DA, #9356DC);
@@ -233,7 +233,7 @@ a {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  width: 270px;
+  width: 250px;
 }
 .work__title {
   font-size: 26px;
@@ -248,13 +248,13 @@ a {
 }
 .work__bar {
   display: flex;
-  width: 330px;
+  width: 310px;
   padding: 5px;
   margin: 5px;
   position: relative;
 }
 .work__bar--text {
-  width: 330px;
+  width: 310px;
   margin: 0;
   background-color: #f0eeee;
   padding: 25px;
@@ -325,7 +325,7 @@ a {
 .restaurant__photo {
   display: flex;
   flex-direction: column;
-  width: 330px;
+  width: 310px;
   height: 230px;
   border-radius: 20px;
   background-color: white;
@@ -333,7 +333,7 @@ a {
   box-shadow: 5px 5px 10px #d3d1d1;
 }
 .restaurant__pic {
-  width: 330px;
+  width: 310px;
   height: 170px;
   border-radius: 20px 20px 0 0;
 }
@@ -416,13 +416,13 @@ a {
 }
 .picture__img {
   height: 270px;
-  width: 420px;
+  width: 400px;
 }
 .picture__band {
   position: absolute;
   top: 290px;
   background-color: #f0eeee;
-  width: 420px;
+  width: 400px;
   height: 60px;
   border-radius: 40px 40px 0 0;
   display: flex;
@@ -474,7 +474,7 @@ a {
   align-items: center;
   justify-content: space-between;
   background-color: #fff;
-  width: 360px;
+  width: 340px;
   height: 70px;
   box-shadow: 5px 5px 10px #d3d1d1;
   border-radius: 20px;
@@ -543,7 +543,7 @@ a {
   white-space: nowrap;
 }
 .starter__compo {
-  width: 310px;
+  width: 290px;
   height: 20px;
 }
 .starter__compo__text {
@@ -607,7 +607,7 @@ a {
   align-items: center;
   justify-content: space-between;
   background-color: #fff;
-  width: 360px;
+  width: 340px;
   height: 70px;
   box-shadow: 5px 5px 10px #d3d1d1;
   border-radius: 20px;
@@ -676,7 +676,7 @@ a {
   white-space: nowrap;
 }
 .main__compo {
-  width: 310px;
+  width: 290px;
   height: 20px;
 }
 .main__compo__text {
@@ -740,7 +740,7 @@ a {
   align-items: center;
   justify-content: space-between;
   background-color: #fff;
-  width: 360px;
+  width: 340px;
   height: 70px;
   box-shadow: 5px 5px 10px #d3d1d1;
   border-radius: 20px;
@@ -809,7 +809,7 @@ a {
   white-space: nowrap;
 }
 .desert__compo {
-  width: 310px;
+  width: 290px;
   height: 20px;
 }
 .desert__compo__text {
