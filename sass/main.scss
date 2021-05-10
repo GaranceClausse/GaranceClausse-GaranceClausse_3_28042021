@@ -30,7 +30,7 @@ $font-medium: 16px;
 $font-small: 12px;
 
 
-$main-font: 'Roboto', sans-serif;
+$main-font: Roboto, sans-serif;
 $second-font: 'Shrikhand', sans-serif;
 
 @mixin flex-center() {
@@ -48,12 +48,12 @@ $second-font: 'Shrikhand', sans-serif;
 }
 
 @mixin linear-gradient {
-    background: linear-gradient(175deg, $colour-secondary, $colour-primary);
+    background: linear-gradient(45deg, $colour-secondary, $colour-primary 80%);
 }
 
 @mixin selection () {
     &__explain {
-        width: 65%;
+        width: 75%;
     }
 
     &__select {
@@ -65,12 +65,12 @@ $second-font: 'Shrikhand', sans-serif;
         transform: rotate(360deg);
     }
 
-    &__price {
-        transform: translateX(-40px);
+    &__compo {
+        width: 290px;
     }
 
     &__compo__text {
-        width: 75%;
+        width: 70%;
     }
 
 }
@@ -127,13 +127,13 @@ $second-font: 'Shrikhand', sans-serif;
     &__explain {
         padding-left: 10px;
         line-height: 15px;
-        width: 90%;
+        width: 87%;
         transition: all 300ms ease-out 80ms;
         
     }
 
     &__name {
-        padding: 10px;
+        padding: 10px 0 10px 10px;
         margin: 0;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -141,22 +141,22 @@ $second-font: 'Shrikhand', sans-serif;
     }
 
     &__compo{
-        width: 290px;
+        width: 310px;
         height: 20px;
-        
-
-       
+        display: flex;
+        flex-direction: row;
+        flex-wrap: no-wrap;
+         
    
         &__text {
-            display: inline;
-            float: left;
             width: 85%;
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
-            margin: 0 0 0 10px;
+            margin: 0 0 0 5px;
             padding: 3px;
             transition: all 300ms ease-out 80ms;
+            font-weight: 400;
         }
     }
        
@@ -175,12 +175,12 @@ $second-font: 'Shrikhand', sans-serif;
     }
 
     &__select {
-        
         border-radius: 0 20px 20px 0;
         background-color: $colour-tertiary;
         height: 100%;
+        @include flex-center();
         opacity: 0;
-        transform: scaleX(0.2);
+        transform: scaleX(0.1);
         transform-origin: right;
         transition: all 400ms ease-in-out 150ms;
     }
@@ -188,9 +188,9 @@ $second-font: 'Shrikhand', sans-serif;
     &__icon {
         color: $colour-white;
         font-size: $font-super-big;
-        padding: 20px;
+        padding: 0 20px;
         transition: transform 600ms ease-in-out 140ms;
-        }
+    }
     
 
 }
@@ -371,31 +371,45 @@ a {
 
 
 /* Style du boutton : button*/
-@mixin button-faded-color($colour: $colour-primary){
-    @if (button:active){
-        $colour: lighten($colour, 70%);
-    }}
+$button-color:  linear-gradient(175deg, $colour-secondary, $colour-primary);
+$button-color-light: linear-gradient(175deg, lighten($colour-secondary, 20%), lighten($colour-primary, 20%));
 
 .button {
+    position: relative;
     font-style: $main-font;
     font-size: $font-medium;
     font-weight: 600;
     height: 50px;
     width: 210px;
     color: $colour-white;
-    background-image: $button-color;
-    background-image: -webkit-$button-color;
+    background: $button-color;
+    background: -webkit-$button-color;
     border: none;
     border-radius: 35px;
-    opacity: 1;
-    transform: opacity(1);
-    transition: all 200ms ease-in;
-    @include box-shadow;
-    &:active {
+    @include box-shadow();
+    z-index: 1;
+    &::after {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
         @include large-box-shadow();
-        @include button-faded-color();
-        opacity: 0.8;
+        background: $button-color-light;
+        background: -webkit-$button-color-light;
+        opacity: 0;
+        z-index: -1;
+        transition: all 200ms ease-in;
     }
+
+    &:hover {
+        ::after {
+            opacity: 1;
+        }
+    }
+
 }
 
 
@@ -735,7 +749,7 @@ a {
     bottom: 9px;
     color: transparent;
 	-webkit-text-stroke: 2px $colour-dark-background;
-	opacity: 0.1;
+	opacity: 0.3;
 
     &--big {
         font-size: $font-super-big;
@@ -760,3 +774,88 @@ a {
 }
 
 
+/* Style de la loading-page */
+
+#loader-wrapper {
+    background: linear-gradient(45deg, lighten($colour-secondary, 15%), lighten($colour-tertiary, 15%));
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    animation: disapear 0.7s ease-out infinite 2s;
+}
+
+@keyframes disapear {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-999999px);
+    }
+  }
+
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: $colour-primary;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: $colour-secondary;
+        -webkit-animation: spin 3s linear infinite;
+        animation: spin 3s linear infinite;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: $colour-tertiary;
+        -webkit-animation: spin 1.5s linear infinite;
+        animation: spin 1.5s linear infinite;
+    }
+}
+
+@-webkit-keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+}
+@keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
