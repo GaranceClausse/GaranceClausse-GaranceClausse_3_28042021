@@ -272,6 +272,7 @@ a {
     width: 100%;
     @include box-shadow;
     margin: 0;
+    width: 100%;
 
     &__logo {
         width: 160px;
@@ -291,10 +292,10 @@ a {
         color: $colour-black;
     }
 
-    &__page {
+    /*&__page {
         @include flex-center();
-        width: 100%;
-    }
+        
+    }*/
 }
 
 
@@ -629,7 +630,7 @@ a {
     background-color: $colour-light-background;
     @include flex-center();
     flex-direction: column;
-    
+    margin: auto;
 }
 
 
@@ -740,7 +741,7 @@ a {
         font-size: $font-super-big;
         padding-bottom: 7px;
         position: absolute;
-        right: 32px;
+        right: 10px;
         bottom: 3px;
 
         @media all and (min-width: 680px) {
