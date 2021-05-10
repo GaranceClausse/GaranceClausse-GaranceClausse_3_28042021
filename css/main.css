@@ -91,7 +91,7 @@ a {
 
 .header {
   background: #fff;
-  height: 70px;
+  height: 55px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -105,8 +105,13 @@ a {
 }
 .header__icon {
   position: absolute;
-  top: 35px;
-  left: 55px;
+  top: 20px;
+  left: 25px;
+}
+@media all and (min-width: 680px) {
+  .header__icon {
+    left: 10%;
+  }
 }
 .header__ancre {
   color: black;
@@ -122,7 +127,6 @@ a {
 #description {
   background-color: #f0eeee;
   width: 100%;
-  height: 270px;
   margin: 0;
   padding-bottom: 30px;
   display: flex;
@@ -131,17 +135,9 @@ a {
   flex-direction: column;
   text-align: center;
 }
-@media all and (min-width: 780px) {
-  #description {
-    position: relative;
-    width: 48%;
-    padding-top: 85px;
-    border-right: 2px dotted #FF79DA;
-  }
-}
 
 .search-bar {
-  height: 60px;
+  height: 40px;
   width: 100%;
   background-color: #d3d1d1;
   flex-direction: row;
@@ -163,8 +159,8 @@ a {
 }
 @media all and (min-width: 780px) {
   .search-bar {
-    position: absolute;
-    top: 0;
+    width: 50%;
+    border-radius: 0 0 20px 20px;
   }
 }
 
@@ -188,6 +184,11 @@ a {
   font-weight: 300;
   margin: 0 0 30px 0;
   line-height: 20px;
+}
+@media all and (min-width: 780px) {
+  .explaination {
+    width: 70%;
+  }
 }
 
 /* Style du boutton : button*/
@@ -222,11 +223,6 @@ a {
   background-color: #fff;
   width: 100%;
 }
-@media all and (min-width: 780px) {
-  #work {
-    width: 48%;
-  }
-}
 
 .work {
   display: flex;
@@ -237,13 +233,12 @@ a {
 }
 .work__title {
   font-size: 26px;
-  padding-left: 20px;
   font-weight: 900;
   margin-right: 30%;
 }
-@media all and (min-width: 780px) {
+@media all and (min-width: 680px) {
   .work__title {
-    margin: 0 0 35px 0;
+    margin-right: 0;
   }
 }
 .work__bar {
@@ -301,9 +296,8 @@ a {
   text-align: center;
   margin-right: 37%;
 }
-@media all and (min-width: 780px) {
+@media all and (min-width: 680px) {
   .restaurant__title {
-    text-align: center;
     margin-right: 0;
   }
 }
@@ -376,7 +370,7 @@ a {
 }
 @media all and (min-width: 768px) {
   .footer__logo {
-    text-align: center;
+    margin-left: 10%;
   }
 }
 .footer__option {
@@ -388,7 +382,7 @@ a {
 }
 @media all and (min-width: 768px) {
   .footer__option {
-    text-align: center;
+    margin-left: 5%;
   }
 }
 .footer__icon {
@@ -416,19 +410,25 @@ a {
 }
 .picture__img {
   height: 270px;
-  width: 400px;
+  width: 100%;
+  object-fit: cover;
 }
 .picture__band {
   position: absolute;
   top: 290px;
   background-color: #f0eeee;
-  width: 400px;
+  width: 100%;
   height: 60px;
   border-radius: 40px 40px 0 0;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: flex-end;
+}
+@media all and (min-width: 680px) {
+  .picture__band {
+    justify-content: center;
+  }
 }
 .picture__restaurant {
   font-family: "Shrikhand", sans-serif;
@@ -447,6 +447,7 @@ a {
   .dish {
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: stretch;
   }
 }
 
@@ -864,70 +865,34 @@ a {
   position: relative;
 }
 
-.fa-heart {
-  color: #9b9a9a;
+.hover-heart {
   font-size: 23px;
   padding: 15px 25px 15px 0;
-  overflow: hidden;
+  position: absolute;
+  right: 10px;
+  bottom: 9px;
+  color: transparent;
+  -webkit-text-stroke: 2px #3a3838;
+  opacity: 0.3;
 }
-.fa-heart--big {
+.hover-heart--big {
   font-size: 26px;
   padding-bottom: 7px;
   position: absolute;
   right: 32px;
   bottom: 3px;
 }
-
-.first-heart {
-  z-index: 1;
-  opacity: 1;
-  transition: all 400ms ease-out;
-}
-
-.hover-heart {
-  opacity: 0;
-  position: absolute;
-  right: 10px;
-  bottom: 9px;
-  z-index: 2;
-  overflow: hidden;
-}
-.hover-heart--big {
-  right: 42px;
-  bottom: 3px;
+@media all and (min-width: 680px) {
+  .hover-heart--big {
+    right: 20%;
+  }
 }
 .hover-heart:hover {
   background: linear-gradient(175deg, #FF79DA, #9356DC);
-  -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  -webkit-text-stroke: 0px;
   opacity: 1;
-  transform: translateX(10px);
-  transition: all 400ms ease-out;
+  transition: all 2s ease-in-out 400ms;
 }
-.hover-heart:hover .first-heart {
-  opacity: 0;
-}
-
-/*.fa-heart::before {
-
-    font-weight: bold;
-    transition: color 1s ease-out;
-    background: $colour-midark-background;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-   -webkit-text-fill-color: transparent;
-}
-
-.fa-heart:hover::before{
-    background:-webkit-linear-gradient(top right, $colour-primary, $colour-secondary 70%);
-    background: linear-gradient(to bottom left, $colour-primary,  $colour-secondary 70%);
-    background:-moz-linear-gradient(top right, $colour-primary, $colour-secondary 70%);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-   -webkit-text-fill-color:-webkit-linear-gradient(top, $colour-secondary, $colour-primary);
-
-}*/
 
 /*# sourceMappingURL=main.css.map */
