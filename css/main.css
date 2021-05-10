@@ -144,7 +144,6 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0;
 }
 .search-bar__icon {
   padding: 5px 8px;
@@ -156,6 +155,7 @@ a {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
+  width: 140px;
 }
 @media all and (min-width: 780px) {
   .search-bar {
@@ -179,7 +179,7 @@ a {
   margin: 25px 0 10px 0;
 }
 .explaination__long {
-  width: 70%;
+  width: 90%;
   font-size: 16px;
   font-weight: 300;
   margin: 0 0 30px 0;
@@ -252,7 +252,7 @@ a {
   width: 310px;
   margin: 0;
   background-color: #f0eeee;
-  padding: 25px;
+  padding: 25px 0 25px 35px;
   box-shadow: 5px 5px 10px #d3d1d1;
   border-radius: 20px;
   transition: background-color 300ms ease-in;
@@ -319,6 +319,7 @@ a {
 .restaurant__photo {
   display: flex;
   flex-direction: column;
+  position: relative;
   width: 310px;
   height: 230px;
   border-radius: 20px;
@@ -351,8 +352,24 @@ a {
   font-size: 16px;
   line-height: 8px;
 }
+.restaurant__love {
+  position: relative;
+}
 .restaurant__ancre {
   color: black;
+}
+.restaurant__logo {
+  width: 90px;
+  height: 25px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #99E2D0;
+  color: #278870;
+  text-align: center;
+  padding-top: 5px;
 }
 
 /* Style du footer */
@@ -861,10 +878,6 @@ a {
 }
 
 /* Effets et animations */
-.restaurant__love {
-  position: relative;
-}
-
 .hover-heart {
   font-size: 23px;
   padding: 15px 25px 15px 0;
@@ -873,7 +886,7 @@ a {
   bottom: 9px;
   color: transparent;
   -webkit-text-stroke: 2px #3a3838;
-  opacity: 0.3;
+  opacity: 0.1;
 }
 .hover-heart--big {
   font-size: 26px;
@@ -892,7 +905,7 @@ a {
   -webkit-background-clip: text;
   -webkit-text-stroke: 0px;
   opacity: 1;
-  transition: all 2s ease-in-out 400ms;
+  transition: all 2s ease-in-out;
 }
 
 /*# sourceMappingURL=main.css.map */
