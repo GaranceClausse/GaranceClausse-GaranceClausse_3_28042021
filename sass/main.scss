@@ -30,7 +30,7 @@ $font-medium: 16px;
 $font-small: 12px;
 
 
-$main-font: Roboto, sans-serif;
+$main-font: 'Roboto', sans-serif;
 $second-font: 'Shrikhand', sans-serif;
 
 @mixin flex-center() {
@@ -108,7 +108,6 @@ $second-font: 'Shrikhand', sans-serif;
         margin: 15px 0 0 0;
         position: relative;
         
-
         &:hover {
             .starter {
                 @include selection();
@@ -197,7 +196,7 @@ $second-font: 'Shrikhand', sans-serif;
 
 
     
-.first {
+/*.first {
     opacity:0;
     -moz-animation: anim 3s ease-in-out forwards 50ms;
     -webkit-animation: anim 3s ease-in-out forwards 50ms;
@@ -236,7 +235,7 @@ $second-font: 'Shrikhand', sans-serif;
  @keyframes anim {
     0%  {opacity:0;}
     100% {opacity:1;}
- }
+ }*/
 
 
 
@@ -376,6 +375,7 @@ $button-color-light: linear-gradient(175deg, lighten($colour-secondary, 20%), li
 
 .button {
     position: relative;
+    display: inline-block;
     font-style: $main-font;
     font-size: $font-medium;
     font-weight: 600;
@@ -388,8 +388,15 @@ $button-color-light: linear-gradient(175deg, lighten($colour-secondary, 20%), li
     border-radius: 35px;
     @include box-shadow();
     z-index: 1;
+    &:hover {
+        &::after {
+            opacity: 1;
+            z-index: 2;
+        }
+    }
+    
     &::after {
-        content: "";
+        content:"";
         position: absolute;
         display: inline-block;
         top: 0;
@@ -401,13 +408,7 @@ $button-color-light: linear-gradient(175deg, lighten($colour-secondary, 20%), li
         background: -webkit-$button-color-light;
         opacity: 0;
         z-index: -1;
-        transition: all 200ms ease-in;
-    }
-
-    &:hover {
-        ::after {
-            opacity: 1;
-        }
+        transition: opacity 200ms;
     }
 
 }
@@ -688,11 +689,6 @@ $button-color-light: linear-gradient(175deg, lighten($colour-secondary, 20%), li
     }
 }
 
-
-
-
-    
-
 .dish {
     width: 100%;
     @include flex-center();
@@ -707,8 +703,36 @@ $button-color-light: linear-gradient(175deg, lighten($colour-secondary, 20%), li
 
 /* Style de entrées : starters */
 
+$num-dish: 4;
+$anim-duration: 2000ms;
+$anim-delay: $anim-duration / $num-dish;
+
+@-moz-keyframes items {
+    0%  {opacity:0;}
+    100% {opacity:1;}
+ }
+ @-webkit-keyframes items {
+    0%  {opacity:0;}
+    100% {opacity:1;}
+ }
+ @keyframes items {
+    0%  {opacity:0;}
+    100% {opacity:1;}
+ }
+
+
+
 .starter {
     @include page-display();
+    &__item {
+        opacity: 0;
+        animation: items $anim-duration ease-in-out forwards;
+        @for $i from 1 through $num-dish {
+            &--#{$i} {
+            animation-delay: $anim-delay * $i;
+            }
+        }
+    }
 }
 
 
@@ -716,6 +740,15 @@ $button-color-light: linear-gradient(175deg, lighten($colour-secondary, 20%), li
 
 .main {
     @include page-display();
+    &__item {
+        opacity: 0;
+        animation: items $anim-duration ease-in-out forwards;
+        @for $i from 1 through $num-dish {
+            &--#{$i} {
+            animation-delay: $anim-delay * $i;
+            }
+        }
+    }
 }
 
 
@@ -723,6 +756,15 @@ $button-color-light: linear-gradient(175deg, lighten($colour-secondary, 20%), li
 
 .desert {
     @include page-display();
+    &__item {
+        opacity: 0;
+        animation: items $anim-duration ease-in-out forwards;
+        @for $i from 1 through $num-dish {
+            &--#{$i} {
+            animation-delay: $anim-delay * $i;
+            }
+        }
+    }
 }
 
 
@@ -768,7 +810,7 @@ $button-color-light: linear-gradient(175deg, lighten($colour-secondary, 20%), li
         -webkit-background-clip: text;
         -webkit-text-stroke: 0px;
         opacity: 1;
-        transition: all 2s ease-in-out;
+        transition: color 1200ms cubic-bezier(1,.08,.72,.61), opacity 1000ms ease-in 200ms;
     }
             
 }
@@ -786,11 +828,11 @@ $button-color-light: linear-gradient(175deg, lighten($colour-secondary, 20%), li
     height: 100%;
     z-index: 1000;
     transform: scaleX(0);
-    animation: disapear 10s ease-out 1;
+    animation: disappear 10s ease-out 1;
 
 }
 
-@keyframes disapear {
+@keyframes disappear {
     0% {
       transform: translateX(1);
       transform: scaleX(1);
@@ -856,15 +898,23 @@ $button-color-light: linear-gradient(175deg, lighten($colour-secondary, 20%), li
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
     }
+    37% {
+        -webkit-transform: rotate(168deg);
+        transform: rotate(168deg);
+    }
     100% {
         -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+        transform: rotate(360deg);
     }
 }
 @keyframes spin {
     0%   {
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
+    }
+    37% {
+        -webkit-transform: rotate(168deg);
+        transform: rotate(168deg);
     }
     100% {
         -webkit-transform: rotate(360deg);
