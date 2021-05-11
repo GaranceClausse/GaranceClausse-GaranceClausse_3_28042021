@@ -13,65 +13,53 @@
 @import "./pages/work";
 @import "./pages/about";
 @import "./pages/project";*/
-.first {
-  opacity: 0;
-  -moz-animation: anim 3s ease-in-out forwards 50ms;
-  -webkit-animation: anim 3s ease-in-out forwards 50ms;
-  animation: anim 3s ease-in-out forwards 50ms;
+/*.first {
+    opacity:0;
+    -moz-animation: anim 3s ease-in-out forwards 50ms;
+    -webkit-animation: anim 3s ease-in-out forwards 50ms;
+    animation: anim 3s ease-in-out forwards 50ms;
 }
 
 .second {
-  opacity: 0;
-  -moz-animation: anim 3s ease-in-out forwards 400ms;
-  -webkit-animation: anim 3s ease-in-out forwards 400ms;
-  animation: anim 3s ease-in-out forwards 400ms;
+    opacity:0;
+    -moz-animation: anim 3s ease-in-out forwards 400ms;
+    -webkit-animation: anim 3s ease-in-out forwards 400ms;
+    animation: anim 3s ease-in-out forwards 400ms;
 }
 
 .third {
-  opacity: 0;
-  -moz-animation: anim 3s ease-in-out forwards 1s;
-  -webkit-animation: anim 3s ease-in-out forwards 1s;
-  animation: anim 3s ease-in-out forwards 1s;
+    opacity:0;
+    -moz-animation: anim 3s ease-in-out forwards 1s;
+    -webkit-animation: anim 3s ease-in-out forwards 1s;
+    animation: anim 3s ease-in-out forwards 1s;
 }
 
 .fourth {
-  opacity: 0;
-  -moz-animation: anim 3s ease-in-out forwards 1.2s;
-  -webkit-animation: anim 3s ease-in-out forwards 1.2s;
-  animation: anim 3s ease-in-out forwards 1.2s;
+    opacity:0;
+    -moz-animation: anim 3s ease-in-out forwards 1.2s;
+    -webkit-animation: anim 3s ease-in-out forwards 1.2s;
+    animation: anim 3s ease-in-out forwards 1.2s;
 }
 
 @-moz-keyframes anim {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes anim {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes anim {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+    0%  {opacity:0;}
+    100% {opacity:1;}
+ }
+ @-webkit-keyframes anim {
+    0%  {opacity:0;}
+    100% {opacity:1;}
+ }
+ @keyframes anim {
+    0%  {opacity:0;}
+    100% {opacity:1;}
+ }*/
 /* Style général de la page*/
 body {
   margin: 0;
 }
 
 #page-index {
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: #f0eeee;
   display: flex;
   justify-content: center;
@@ -152,7 +140,7 @@ a {
   padding: 4px 8px;
   background-color: #d3d1d1;
   font-size: 16px;
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   width: 140px;
 }
@@ -193,7 +181,8 @@ a {
 /* Style du boutton : button*/
 .button {
   position: relative;
-  font-style: Roboto, sans-serif;
+  display: inline-block;
+  font-style: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 600;
   height: 50px;
@@ -205,6 +194,10 @@ a {
   border-radius: 35px;
   box-shadow: 5px 5px 10px #d3d1d1;
   z-index: 1;
+}
+.button:hover::after {
+  opacity: 1;
+  z-index: 2;
 }
 .button::after {
   content: "";
@@ -219,10 +212,7 @@ a {
   background: -webkit- linear-gradient(175deg, #ffdff6, #c9abee);
   opacity: 0;
   z-index: -1;
-  transition: all 200ms ease-in;
-}
-.button:hover ::after {
-  opacity: 1;
+  transition: opacity 200ms;
 }
 
 /* Style de fonctionnement : work */
@@ -390,7 +380,7 @@ a {
   padding: 5px;
   background-color: #3a3838;
   color: #fff;
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 .footer__logo {
   font-family: "Shrikhand", sans-serif;
@@ -420,7 +410,7 @@ a {
 
 /* Style général des pages de restaurant*/
 #page {
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: #f0eeee;
   display: flex;
   justify-content: center;
@@ -482,6 +472,30 @@ a {
 }
 
 /* Style de entrées : starters */
+@-moz-keyframes items {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes items {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes items {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .starter {
   background-color: #f0eeee;
 }
@@ -617,6 +631,22 @@ a {
   font-size: 26px;
   padding: 0 20px;
   transition: transform 600ms ease-in-out 140ms;
+}
+.starter__item {
+  opacity: 0;
+  animation: items 2000ms ease-in-out forwards;
+}
+.starter__item--1 {
+  animation-delay: 500ms;
+}
+.starter__item--2 {
+  animation-delay: 1000ms;
+}
+.starter__item--3 {
+  animation-delay: 1500ms;
+}
+.starter__item--4 {
+  animation-delay: 2000ms;
 }
 
 /* Style des palts : main */
@@ -756,6 +786,22 @@ a {
   padding: 0 20px;
   transition: transform 600ms ease-in-out 140ms;
 }
+.main__item {
+  opacity: 0;
+  animation: items 2000ms ease-in-out forwards;
+}
+.main__item--1 {
+  animation-delay: 500ms;
+}
+.main__item--2 {
+  animation-delay: 1000ms;
+}
+.main__item--3 {
+  animation-delay: 1500ms;
+}
+.main__item--4 {
+  animation-delay: 2000ms;
+}
 
 /* Style des desserts : desert */
 .desert {
@@ -894,6 +940,22 @@ a {
   padding: 0 20px;
   transition: transform 600ms ease-in-out 140ms;
 }
+.desert__item {
+  opacity: 0;
+  animation: items 2000ms ease-in-out forwards;
+}
+.desert__item--1 {
+  animation-delay: 500ms;
+}
+.desert__item--2 {
+  animation-delay: 1000ms;
+}
+.desert__item--3 {
+  animation-delay: 1500ms;
+}
+.desert__item--4 {
+  animation-delay: 2000ms;
+}
 
 /* Style du bouton de commande : order__button */
 .order {
@@ -933,7 +995,7 @@ a {
   -webkit-background-clip: text;
   -webkit-text-stroke: 0px;
   opacity: 1;
-  transition: all 2s ease-in-out;
+  transition: color 1200ms cubic-bezier(1, 0.08, 0.72, 0.61), opacity 1000ms ease-in 200ms;
 }
 
 /* Style de la loading-page */
@@ -942,18 +1004,29 @@ a {
   position: fixed;
   top: 0;
   left: 0;
+  opacity: 1;
   width: 100%;
   height: 100%;
   z-index: 1000;
-  animation: disapear 0.7s ease-out infinite 2s;
+  transform: scaleX(0);
+  animation: disappear 10s ease-out 1;
 }
 
-@keyframes disapear {
-  from {
-    transform: translateX(0);
+@keyframes disappear {
+  0% {
+    transform: translateX(1);
+    transform: scaleX(1);
+    opacity: 1;
   }
-  to {
-    transform: translateX(-999999px);
+  16% {
+    transform: scaleX(1);
+  }
+  47% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-3000px);
+    opacity: 0.7;
   }
 }
 #loader {
@@ -1002,16 +1075,23 @@ a {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
+  37% {
+    -webkit-transform: rotate(168deg);
+    transform: rotate(168deg);
+  }
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
-    /* Firefox 16+, IE 10+, Opera */
   }
 }
 @keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
+  }
+  37% {
+    -webkit-transform: rotate(168deg);
+    transform: rotate(168deg);
   }
   100% {
     -webkit-transform: rotate(360deg);
