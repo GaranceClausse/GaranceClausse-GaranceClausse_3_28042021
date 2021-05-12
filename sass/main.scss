@@ -108,7 +108,7 @@ $second-font: 'Shrikhand', sans-serif;
         margin: 15px 0 0 0;
         position: relative;
         
-        &:hover {
+       /* &:hover {
             .starter {
                 @include selection();
             }
@@ -120,7 +120,7 @@ $second-font: 'Shrikhand', sans-serif;
                 @include selection();
             }
             
-        }
+        }*/
     }
 
     &__explain {
@@ -704,7 +704,15 @@ $anim-delay: $anim-duration / $num-dish;
             -webkit-animation-delay: $anim-delay * $i;
             }
         }
+
+        &:hover {
+            .starter {
+                @include selection();
+            }
+           
+        }
     }
+    
 }
 
 
@@ -722,7 +730,15 @@ $anim-delay: $anim-duration / $num-dish;
             -webkit-animation-delay: $anim-delay * $i;
             }
         }
+
+        &:hover {
+            .main {
+                @include selection();
+            }
+            
+        }
     }
+    
 }
 
 
@@ -740,7 +756,16 @@ $anim-delay: $anim-duration / $num-dish;
             -webkit-animation-delay: $anim-delay * $i;
             }
         }
+
+        &:hover {
+            
+            .desert {
+                @include selection();
+            }
+            
+        }
     }
+    
 }
 
 

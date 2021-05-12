@@ -498,54 +498,19 @@ a {
   border-radius: 20px;
   margin: 15px 0 0 0;
   position: relative;
-}
-.starter__item:hover .starter__explain {
-  width: 75%;
-}
-.starter__item:hover .starter__select {
-  opacity: 1;
-  transform: scaleX(1);
-}
-.starter__item:hover .starter__icon {
-  transform: rotate(360deg);
-}
-.starter__item:hover .starter__compo {
-  width: 290px;
-}
-.starter__item:hover .starter__compo__text {
-  width: 70%;
-}
-.starter__item:hover .main__explain {
-  width: 75%;
-}
-.starter__item:hover .main__select {
-  opacity: 1;
-  transform: scaleX(1);
-}
-.starter__item:hover .main__icon {
-  transform: rotate(360deg);
-}
-.starter__item:hover .main__compo {
-  width: 290px;
-}
-.starter__item:hover .main__compo__text {
-  width: 70%;
-}
-.starter__item:hover .desert__explain {
-  width: 75%;
-}
-.starter__item:hover .desert__select {
-  opacity: 1;
-  transform: scaleX(1);
-}
-.starter__item:hover .desert__icon {
-  transform: rotate(360deg);
-}
-.starter__item:hover .desert__compo {
-  width: 290px;
-}
-.starter__item:hover .desert__compo__text {
-  width: 70%;
+  /* &:hover {
+       .starter {
+           @include selection();
+       }
+
+       .main {
+           @include selection();
+       }
+       .desert {
+           @include selection();
+       }
+
+   }*/
 }
 .starter__explain {
   padding-left: 10px;
@@ -626,6 +591,22 @@ a {
   animation-delay: 2000ms;
   -webkit-animation-delay: 2000ms;
 }
+.starter__item:hover .starter__explain {
+  width: 75%;
+}
+.starter__item:hover .starter__select {
+  opacity: 1;
+  transform: scaleX(1);
+}
+.starter__item:hover .starter__icon {
+  transform: rotate(360deg);
+}
+.starter__item:hover .starter__compo {
+  width: 290px;
+}
+.starter__item:hover .starter__compo__text {
+  width: 70%;
+}
 
 /* Style des palts : main */
 .main {
@@ -657,54 +638,19 @@ a {
   border-radius: 20px;
   margin: 15px 0 0 0;
   position: relative;
-}
-.main__item:hover .starter__explain {
-  width: 75%;
-}
-.main__item:hover .starter__select {
-  opacity: 1;
-  transform: scaleX(1);
-}
-.main__item:hover .starter__icon {
-  transform: rotate(360deg);
-}
-.main__item:hover .starter__compo {
-  width: 290px;
-}
-.main__item:hover .starter__compo__text {
-  width: 70%;
-}
-.main__item:hover .main__explain {
-  width: 75%;
-}
-.main__item:hover .main__select {
-  opacity: 1;
-  transform: scaleX(1);
-}
-.main__item:hover .main__icon {
-  transform: rotate(360deg);
-}
-.main__item:hover .main__compo {
-  width: 290px;
-}
-.main__item:hover .main__compo__text {
-  width: 70%;
-}
-.main__item:hover .desert__explain {
-  width: 75%;
-}
-.main__item:hover .desert__select {
-  opacity: 1;
-  transform: scaleX(1);
-}
-.main__item:hover .desert__icon {
-  transform: rotate(360deg);
-}
-.main__item:hover .desert__compo {
-  width: 290px;
-}
-.main__item:hover .desert__compo__text {
-  width: 70%;
+  /* &:hover {
+       .starter {
+           @include selection();
+       }
+
+       .main {
+           @include selection();
+       }
+       .desert {
+           @include selection();
+       }
+
+   }*/
 }
 .main__explain {
   padding-left: 10px;
@@ -785,6 +731,22 @@ a {
   animation-delay: 2000ms;
   -webkit-animation-delay: 2000ms;
 }
+.main__item:hover .main__explain {
+  width: 75%;
+}
+.main__item:hover .main__select {
+  opacity: 1;
+  transform: scaleX(1);
+}
+.main__item:hover .main__icon {
+  transform: rotate(360deg);
+}
+.main__item:hover .main__compo {
+  width: 290px;
+}
+.main__item:hover .main__compo__text {
+  width: 70%;
+}
 
 /* Style des desserts : desert */
 .desert {
@@ -816,54 +778,19 @@ a {
   border-radius: 20px;
   margin: 15px 0 0 0;
   position: relative;
-}
-.desert__item:hover .starter__explain {
-  width: 75%;
-}
-.desert__item:hover .starter__select {
-  opacity: 1;
-  transform: scaleX(1);
-}
-.desert__item:hover .starter__icon {
-  transform: rotate(360deg);
-}
-.desert__item:hover .starter__compo {
-  width: 290px;
-}
-.desert__item:hover .starter__compo__text {
-  width: 70%;
-}
-.desert__item:hover .main__explain {
-  width: 75%;
-}
-.desert__item:hover .main__select {
-  opacity: 1;
-  transform: scaleX(1);
-}
-.desert__item:hover .main__icon {
-  transform: rotate(360deg);
-}
-.desert__item:hover .main__compo {
-  width: 290px;
-}
-.desert__item:hover .main__compo__text {
-  width: 70%;
-}
-.desert__item:hover .desert__explain {
-  width: 75%;
-}
-.desert__item:hover .desert__select {
-  opacity: 1;
-  transform: scaleX(1);
-}
-.desert__item:hover .desert__icon {
-  transform: rotate(360deg);
-}
-.desert__item:hover .desert__compo {
-  width: 290px;
-}
-.desert__item:hover .desert__compo__text {
-  width: 70%;
+  /* &:hover {
+       .starter {
+           @include selection();
+       }
+
+       .main {
+           @include selection();
+       }
+       .desert {
+           @include selection();
+       }
+
+   }*/
 }
 .desert__explain {
   padding-left: 10px;
@@ -943,6 +870,22 @@ a {
 .desert__item--4 {
   animation-delay: 2000ms;
   -webkit-animation-delay: 2000ms;
+}
+.desert__item:hover .desert__explain {
+  width: 75%;
+}
+.desert__item:hover .desert__select {
+  opacity: 1;
+  transform: scaleX(1);
+}
+.desert__item:hover .desert__icon {
+  transform: rotate(360deg);
+}
+.desert__item:hover .desert__compo {
+  width: 290px;
+}
+.desert__item:hover .desert__compo__text {
+  width: 70%;
 }
 
 /* Style du bouton de commande : order__button */
