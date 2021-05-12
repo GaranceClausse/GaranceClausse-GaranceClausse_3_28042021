@@ -206,7 +206,10 @@ body {
     background-color: $colour-light-background;
     @include flex-center();
     flex-direction: column;
+    margin: auto;
+    width: auto;
 
+    
     @media all and (min-width: 780px) {
         flex-direction: row;
         flex-wrap: wrap;
@@ -361,7 +364,7 @@ $button-color-light: linear-gradient(175deg, lighten($colour-secondary, 20%), li
         left: 0;
         @include large-box-shadow();
         background: $button-color-light;
-        background: -webkit-$button-color-light;
+        -webkit-background: -webkit-$button-color-light;
         opacity: 0;
         z-index: -1;
         transition: opacity 200ms;
@@ -493,6 +496,7 @@ $button-color-light: linear-gradient(175deg, lighten($colour-secondary, 20%), li
         border-radius: 20px;
         background-color: white;
         padding-bottom: 5px;
+        margin: 20px 50px;
         @include box-shadow;
     }
 
@@ -761,10 +765,16 @@ $anim-delay: $anim-duration / $num-dish;
         position: absolute;
         right: 10px;
         bottom: 3px;
+        
 
-        @media all and (min-width: 680px) {
+        @media all and (min-width: 680px) and (max-width: 1200px) {
             right: 20%;
         }
+
+        @media all and (min-width: 1200px){
+            right: 30%;
+        }
+       
     }
 
     &:hover {
