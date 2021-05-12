@@ -460,6 +460,16 @@ $button-color-light: linear-gradient(175deg, lighten($colour-secondary, 20%), li
     background-color: $colour-light-background;
     width: 100%;
 
+    
+    @media all and (min-width: 1360px) {
+        width: 60%;
+    }
+
+    @media all and (min-width: 1200px) and (max-width: 1360px) {
+        width: 70%;
+    }
+
+
     &__title {
         font-size: $font-super-big;
         padding: 20px 0 0 20px;
@@ -553,7 +563,7 @@ $button-color-light: linear-gradient(175deg, lighten($colour-secondary, 20%), li
         padding-top: 5px;
     }
 
-   
+      
 }
 
 
