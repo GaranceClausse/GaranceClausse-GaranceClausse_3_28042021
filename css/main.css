@@ -253,6 +253,16 @@ a {
   background-color: #f0eeee;
   width: 100%;
 }
+@media all and (min-width: 1360px) {
+  .restaurant {
+    width: 60%;
+  }
+}
+@media all and (min-width: 1200px) and (max-width: 1360px) {
+  .restaurant {
+    width: 70%;
+  }
+}
 .restaurant__title {
   font-size: 26px;
   padding: 20px 0 0 20px;
