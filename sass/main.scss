@@ -67,6 +67,9 @@ $second-font: 'Shrikhand', sans-serif;
 
     &__compo {
         width: 290px;
+        @media all and (max-width: 370px) {
+            width: 200px;
+        }
     }
 
     &__compo__text {
@@ -108,19 +111,9 @@ $second-font: 'Shrikhand', sans-serif;
         margin: 15px 0 0 0;
         position: relative;
         
-       /* &:hover {
-            .starter {
-                @include selection();
-            }
-
-            .main {
-                @include selection();
-            }
-            .desert {
-                @include selection();
-            }
-            
-        }*/
+       @media all and (max-width: 370px) {
+           width: 260px;
+       }
     }
 
     &__explain {
@@ -144,8 +137,11 @@ $second-font: 'Shrikhand', sans-serif;
         height: 20px;
         display: flex;
         flex-direction: row;
-        flex-wrap: no-wrap;
-         
+
+        @media all and (max-width: 370px) {
+            width: 200px;
+        }
+               
    
         &__text {
             width: 85%;
@@ -189,6 +185,10 @@ $second-font: 'Shrikhand', sans-serif;
         font-size: $font-super-big;
         padding: 0 20px;
         transition: transform 600ms ease-in-out 140ms;
+
+        @media all and (max-width: 370px) {
+            padding: 0 10px;
+        }
     }
     
 
@@ -406,6 +406,10 @@ $button-color-light: linear-gradient(175deg, lighten($colour-secondary, 20%), li
        padding: 5px;
        margin: 5px;
        position: relative;
+
+       @media all and (max-width: 370px) {
+        width: 250px;
+    }
        
        
 
@@ -417,6 +421,11 @@ $button-color-light: linear-gradient(175deg, lighten($colour-secondary, 20%), li
            @include box-shadow;
            border-radius: 20px;
            transition: background-color 300ms ease-in;
+
+           @media all and (max-width: 370px) {
+            width: 240px;
+            padding-left: 15px;
+           }
 
            &:hover {
                background-color: lighten($colour-primary, 30%);
@@ -434,6 +443,10 @@ $button-color-light: linear-gradient(175deg, lighten($colour-secondary, 20%), li
         color: $colour-dark;
         font-size: $font-big;
         transition: transform 330ms ease-in-out;
+
+        @media all and (max-width: 370px) {
+            padding: 0 10px;
+        }
     }
 
     &__number {
@@ -508,12 +521,20 @@ $button-color-light: linear-gradient(175deg, lighten($colour-secondary, 20%), li
         padding-bottom: 5px;
         margin: 20px 50px;
         @include box-shadow;
+        @media all and (max-width: 370px) {
+            width: 250px;
+            height: 180px;
+        }
     }
 
     &__pic {
         width: 310px;
         height: 170px;
         border-radius: 20px  20px 0 0;
+        @media all and (max-width: 370px) {
+            width: 250px;
+            height: 120px;
+        }
     }
 
     &__band {
@@ -575,9 +596,6 @@ $button-color-light: linear-gradient(175deg, lighten($colour-secondary, 20%), li
     background-color: $colour-dark-background;
     color: $colour-white;
     font-family: $main-font;
-
-    
-
 
     &__logo {
         font-family: $second-font;

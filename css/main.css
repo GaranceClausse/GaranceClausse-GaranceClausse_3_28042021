@@ -212,6 +212,11 @@ a {
   margin: 5px;
   position: relative;
 }
+@media all and (max-width: 370px) {
+  .work__bar {
+    width: 250px;
+  }
+}
 .work__bar--text {
   width: 310px;
   margin: 0;
@@ -220,6 +225,12 @@ a {
   box-shadow: 5px 5px 10px #d3d1d1;
   border-radius: 20px;
   transition: background-color 300ms ease-in;
+}
+@media all and (max-width: 370px) {
+  .work__bar--text {
+    width: 240px;
+    padding-left: 15px;
+  }
 }
 .work__bar--text:hover {
   background-color: #e4d5f6;
@@ -232,6 +243,11 @@ a {
   color: #9b9a9a;
   font-size: 23px;
   transition: transform 330ms ease-in-out;
+}
+@media all and (max-width: 370px) {
+  .work__icon {
+    padding: 0 10px;
+  }
 }
 .work__number {
   background-color: #9356DC;
@@ -302,10 +318,22 @@ a {
   margin: 20px 50px;
   box-shadow: 5px 5px 10px #d3d1d1;
 }
+@media all and (max-width: 370px) {
+  .restaurant__photo {
+    width: 250px;
+    height: 180px;
+  }
+}
 .restaurant__pic {
   width: 310px;
   height: 170px;
   border-radius: 20px 20px 0 0;
+}
+@media all and (max-width: 370px) {
+  .restaurant__pic {
+    width: 250px;
+    height: 120px;
+  }
 }
 .restaurant__band {
   background-color: #fff;
@@ -498,19 +526,11 @@ a {
   border-radius: 20px;
   margin: 15px 0 0 0;
   position: relative;
-  /* &:hover {
-       .starter {
-           @include selection();
-       }
-
-       .main {
-           @include selection();
-       }
-       .desert {
-           @include selection();
-       }
-
-   }*/
+}
+@media all and (max-width: 370px) {
+  .starter__item {
+    width: 260px;
+  }
 }
 .starter__explain {
   padding-left: 10px;
@@ -530,7 +550,11 @@ a {
   height: 20px;
   display: flex;
   flex-direction: row;
-  flex-wrap: no-wrap;
+}
+@media all and (max-width: 370px) {
+  .starter__compo {
+    width: 200px;
+  }
 }
 .starter__compo__text {
   width: 85%;
@@ -570,6 +594,11 @@ a {
   padding: 0 20px;
   transition: transform 600ms ease-in-out 140ms;
 }
+@media all and (max-width: 370px) {
+  .starter__icon {
+    padding: 0 10px;
+  }
+}
 .starter__item {
   opacity: 0;
   animation: items 2000ms ease-in-out forwards;
@@ -603,6 +632,11 @@ a {
 }
 .starter__item:hover .starter__compo {
   width: 290px;
+}
+@media all and (max-width: 370px) {
+  .starter__item:hover .starter__compo {
+    width: 200px;
+  }
 }
 .starter__item:hover .starter__compo__text {
   width: 70%;
@@ -638,19 +672,11 @@ a {
   border-radius: 20px;
   margin: 15px 0 0 0;
   position: relative;
-  /* &:hover {
-       .starter {
-           @include selection();
-       }
-
-       .main {
-           @include selection();
-       }
-       .desert {
-           @include selection();
-       }
-
-   }*/
+}
+@media all and (max-width: 370px) {
+  .main__item {
+    width: 260px;
+  }
 }
 .main__explain {
   padding-left: 10px;
@@ -670,7 +696,11 @@ a {
   height: 20px;
   display: flex;
   flex-direction: row;
-  flex-wrap: no-wrap;
+}
+@media all and (max-width: 370px) {
+  .main__compo {
+    width: 200px;
+  }
 }
 .main__compo__text {
   width: 85%;
@@ -710,6 +740,11 @@ a {
   padding: 0 20px;
   transition: transform 600ms ease-in-out 140ms;
 }
+@media all and (max-width: 370px) {
+  .main__icon {
+    padding: 0 10px;
+  }
+}
 .main__item {
   opacity: 0;
   animation: items 2000ms ease-in-out forwards;
@@ -743,6 +778,11 @@ a {
 }
 .main__item:hover .main__compo {
   width: 290px;
+}
+@media all and (max-width: 370px) {
+  .main__item:hover .main__compo {
+    width: 200px;
+  }
 }
 .main__item:hover .main__compo__text {
   width: 70%;
@@ -778,19 +818,11 @@ a {
   border-radius: 20px;
   margin: 15px 0 0 0;
   position: relative;
-  /* &:hover {
-       .starter {
-           @include selection();
-       }
-
-       .main {
-           @include selection();
-       }
-       .desert {
-           @include selection();
-       }
-
-   }*/
+}
+@media all and (max-width: 370px) {
+  .desert__item {
+    width: 260px;
+  }
 }
 .desert__explain {
   padding-left: 10px;
@@ -810,7 +842,11 @@ a {
   height: 20px;
   display: flex;
   flex-direction: row;
-  flex-wrap: no-wrap;
+}
+@media all and (max-width: 370px) {
+  .desert__compo {
+    width: 200px;
+  }
 }
 .desert__compo__text {
   width: 85%;
@@ -850,6 +886,11 @@ a {
   padding: 0 20px;
   transition: transform 600ms ease-in-out 140ms;
 }
+@media all and (max-width: 370px) {
+  .desert__icon {
+    padding: 0 10px;
+  }
+}
 .desert__item {
   opacity: 0;
   animation: items 2000ms ease-in-out forwards;
@@ -883,6 +924,11 @@ a {
 }
 .desert__item:hover .desert__compo {
   width: 290px;
+}
+@media all and (max-width: 370px) {
+  .desert__item:hover .desert__compo {
+    width: 200px;
+  }
 }
 .desert__item:hover .desert__compo__text {
   width: 70%;
