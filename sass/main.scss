@@ -67,7 +67,7 @@ $second-font: 'Shrikhand', sans-serif;
 
     &__compo {
         width: 290px;
-        @media all and (max-width: 370px) {
+        @media all and (max-width: 350px) {
             width: 200px;
         }
     }
@@ -111,7 +111,7 @@ $second-font: 'Shrikhand', sans-serif;
         margin: 15px 0 0 0;
         position: relative;
         
-       @media all and (max-width: 370px) {
+       @media all and (max-width: 350px) {
            width: 260px;
        }
     }
@@ -138,7 +138,7 @@ $second-font: 'Shrikhand', sans-serif;
         display: flex;
         flex-direction: row;
 
-        @media all and (max-width: 370px) {
+        @media all and (max-width: 350px) {
             width: 200px;
         }
                
@@ -186,7 +186,7 @@ $second-font: 'Shrikhand', sans-serif;
         padding: 0 20px;
         transition: transform 600ms ease-in-out 140ms;
 
-        @media all and (max-width: 370px) {
+        @media all and (max-width: 350px) {
             padding: 0 10px;
         }
     }
@@ -407,7 +407,7 @@ $button-color-light: linear-gradient(175deg, lighten($colour-secondary, 20%), li
        margin: 5px;
        position: relative;
 
-       @media all and (max-width: 370px) {
+       @media all and (max-width: 350px) {
         width: 250px;
     }
        
@@ -422,7 +422,7 @@ $button-color-light: linear-gradient(175deg, lighten($colour-secondary, 20%), li
            border-radius: 20px;
            transition: background-color 300ms ease-in;
 
-           @media all and (max-width: 370px) {
+           @media all and (max-width: 350px) {
             width: 240px;
             padding-left: 15px;
            }
@@ -444,7 +444,7 @@ $button-color-light: linear-gradient(175deg, lighten($colour-secondary, 20%), li
         font-size: $font-big;
         transition: transform 330ms ease-in-out;
 
-        @media all and (max-width: 370px) {
+        @media all and (max-width: 350px) {
             padding: 0 10px;
         }
     }
@@ -521,7 +521,7 @@ $button-color-light: linear-gradient(175deg, lighten($colour-secondary, 20%), li
         padding-bottom: 5px;
         margin: 20px 50px;
         @include box-shadow;
-        @media all and (max-width: 370px) {
+        @media all and (max-width: 350px) {
             width: 250px;
             height: 180px;
         }
@@ -531,7 +531,7 @@ $button-color-light: linear-gradient(175deg, lighten($colour-secondary, 20%), li
         width: 310px;
         height: 170px;
         border-radius: 20px  20px 0 0;
-        @media all and (max-width: 370px) {
+        @media all and (max-width: 350px) {
             width: 250px;
             height: 120px;
         }
