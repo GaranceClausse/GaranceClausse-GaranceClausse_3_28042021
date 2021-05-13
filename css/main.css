@@ -212,7 +212,7 @@ a {
   margin: 5px;
   position: relative;
 }
-@media all and (max-width: 370px) {
+@media all and (max-width: 350px) {
   .work__bar {
     width: 250px;
   }
@@ -226,7 +226,7 @@ a {
   border-radius: 20px;
   transition: background-color 300ms ease-in;
 }
-@media all and (max-width: 370px) {
+@media all and (max-width: 350px) {
   .work__bar--text {
     width: 240px;
     padding-left: 15px;
@@ -244,7 +244,7 @@ a {
   font-size: 23px;
   transition: transform 330ms ease-in-out;
 }
-@media all and (max-width: 370px) {
+@media all and (max-width: 350px) {
   .work__icon {
     padding: 0 10px;
   }
@@ -318,7 +318,7 @@ a {
   margin: 20px 50px;
   box-shadow: 5px 5px 10px #d3d1d1;
 }
-@media all and (max-width: 370px) {
+@media all and (max-width: 350px) {
   .restaurant__photo {
     width: 250px;
     height: 180px;
@@ -329,7 +329,7 @@ a {
   height: 170px;
   border-radius: 20px 20px 0 0;
 }
-@media all and (max-width: 370px) {
+@media all and (max-width: 350px) {
   .restaurant__pic {
     width: 250px;
     height: 120px;
@@ -527,7 +527,7 @@ a {
   margin: 15px 0 0 0;
   position: relative;
 }
-@media all and (max-width: 370px) {
+@media all and (max-width: 350px) {
   .starter__item {
     width: 260px;
   }
@@ -551,7 +551,7 @@ a {
   display: flex;
   flex-direction: row;
 }
-@media all and (max-width: 370px) {
+@media all and (max-width: 350px) {
   .starter__compo {
     width: 200px;
   }
@@ -594,7 +594,7 @@ a {
   padding: 0 20px;
   transition: transform 600ms ease-in-out 140ms;
 }
-@media all and (max-width: 370px) {
+@media all and (max-width: 350px) {
   .starter__icon {
     padding: 0 10px;
   }
@@ -633,7 +633,7 @@ a {
 .starter__item:hover .starter__compo {
   width: 290px;
 }
-@media all and (max-width: 370px) {
+@media all and (max-width: 350px) {
   .starter__item:hover .starter__compo {
     width: 200px;
   }
@@ -673,7 +673,7 @@ a {
   margin: 15px 0 0 0;
   position: relative;
 }
-@media all and (max-width: 370px) {
+@media all and (max-width: 350px) {
   .main__item {
     width: 260px;
   }
@@ -697,7 +697,7 @@ a {
   display: flex;
   flex-direction: row;
 }
-@media all and (max-width: 370px) {
+@media all and (max-width: 350px) {
   .main__compo {
     width: 200px;
   }
@@ -740,7 +740,7 @@ a {
   padding: 0 20px;
   transition: transform 600ms ease-in-out 140ms;
 }
-@media all and (max-width: 370px) {
+@media all and (max-width: 350px) {
   .main__icon {
     padding: 0 10px;
   }
@@ -779,7 +779,7 @@ a {
 .main__item:hover .main__compo {
   width: 290px;
 }
-@media all and (max-width: 370px) {
+@media all and (max-width: 350px) {
   .main__item:hover .main__compo {
     width: 200px;
   }
@@ -819,7 +819,7 @@ a {
   margin: 15px 0 0 0;
   position: relative;
 }
-@media all and (max-width: 370px) {
+@media all and (max-width: 350px) {
   .desert__item {
     width: 260px;
   }
@@ -843,7 +843,7 @@ a {
   display: flex;
   flex-direction: row;
 }
-@media all and (max-width: 370px) {
+@media all and (max-width: 350px) {
   .desert__compo {
     width: 200px;
   }
@@ -886,7 +886,7 @@ a {
   padding: 0 20px;
   transition: transform 600ms ease-in-out 140ms;
 }
-@media all and (max-width: 370px) {
+@media all and (max-width: 350px) {
   .desert__icon {
     padding: 0 10px;
   }
@@ -925,7 +925,7 @@ a {
 .desert__item:hover .desert__compo {
   width: 290px;
 }
-@media all and (max-width: 370px) {
+@media all and (max-width: 350px) {
   .desert__item:hover .desert__compo {
     width: 200px;
   }
