@@ -150,31 +150,45 @@ a {
   height: 50px;
   width: 210px;
   color: #fff;
-  background: linear-gradient(175deg, #FF79DA, #9356DC);
-  background: -webkit- linear-gradient(175deg, #FF79DA, #9356DC);
   border: none;
   border-radius: 35px;
   box-shadow: 5px 5px 10px #d3d1d1;
-  z-index: 1;
+  overflow: hidden;
+  z-index: 0;
+  background: linear-gradient(175deg, #FF79DA, #9356DC);
+  background: -webkit- linear-gradient(175deg, #FF79DA, #9356DC);
+  transition: all 400ms;
+  /*&::after {
+      content: "";
+      position: relative;
+      display: block;
+      opacity: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      @include large-box-shadow();
+      background: $button-color-light;
+      -webkit-background: -webkit-$button-color-light;
+      transition: all 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+
+  &:hover {
+      &::after {
+          z-index: 1;
+          opacity: 1;
+      }
+  }
+
+  &:active {
+      transform: translateY(-2px);
+  }
+  */
 }
-.button:hover::after {
-  opacity: 1;
-  z-index: 2;
-}
-.button::after {
-  content: "";
-  position: absolute;
-  display: inline-block;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+.button:hover {
+  background: linear-gradient(175deg, #ff88de, #ae80e5);
+  background: -webkit- linear-gradient(175deg, #ff88de, #ae80e5);
   box-shadow: 10px 8px 10px #3a3838;
-  background: linear-gradient(175deg, #ffdff6, #c9abee);
-  -webkit-background: -webkit- linear-gradient(175deg, #ffdff6, #c9abee);
-  opacity: 0;
-  z-index: -1;
-  transition: opacity 200ms;
 }
 
 /* Style de fonctionnement : work */
@@ -941,7 +955,6 @@ a {
   justify-content: center;
   align-items: center;
   padding: 50px 0 70px 0;
-  background-color: #f0eeee;
 }
 
 /* Effets et animations */
