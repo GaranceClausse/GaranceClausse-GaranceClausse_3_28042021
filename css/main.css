@@ -180,15 +180,16 @@ a {
       }
   }
 
-  &:active {
-      transform: translateY(-2px);
-  }
+
   */
 }
 .button:hover {
   background: linear-gradient(175deg, #ff88de, #ae80e5);
   background: -webkit- linear-gradient(175deg, #ff88de, #ae80e5);
   box-shadow: 10px 8px 10px #3a3838;
+}
+.button:active {
+  transform: translateY(-2px);
 }
 
 /* Style de fonctionnement : work */

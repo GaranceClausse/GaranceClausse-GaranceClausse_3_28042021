@@ -355,6 +355,11 @@ $button-color-light: linear-gradient(175deg, lighten($colour-secondary, 3%), lig
         background: -webkit-$button-color-light;
         @include large-box-shadow();
     }
+
+    &:active {
+        transform: translateY(-2px);
+    }
+    
     /*&::after {
         content: "";
         position: relative;
@@ -377,9 +382,7 @@ $button-color-light: linear-gradient(175deg, lighten($colour-secondary, 3%), lig
         }
     }
 
-    &:active {
-        transform: translateY(-2px);
-    }
+    
     */
     
 
