@@ -189,7 +189,7 @@ a {
   box-shadow: 10px 8px 10px #3a3838;
 }
 .button:active {
-  transform: translateY(-2px);
+  transform: translate(0.7px, -1px);
 }
 
 /* Style de fonctionnement : work */
@@ -578,7 +578,7 @@ a {
   white-space: nowrap;
   margin: 0 0 0 5px;
   padding: 3px;
-  transition: all 300ms ease-out 80ms;
+  transition: all 1000ms;
   font-weight: 400;
 }
 .starter__price {
@@ -589,7 +589,7 @@ a {
   width: 5%;
   font-weight: 900;
   padding: 3px 3px 3px 8px;
-  transition: all 400ms ease-in-out 130ms;
+  transition: all 400ms ease-in-out 500ms;
 }
 .starter__select {
   border-radius: 0 20px 20px 0;
@@ -724,7 +724,7 @@ a {
   white-space: nowrap;
   margin: 0 0 0 5px;
   padding: 3px;
-  transition: all 300ms ease-out 80ms;
+  transition: all 1000ms;
   font-weight: 400;
 }
 .main__price {
@@ -735,7 +735,7 @@ a {
   width: 5%;
   font-weight: 900;
   padding: 3px 3px 3px 8px;
-  transition: all 400ms ease-in-out 130ms;
+  transition: all 400ms ease-in-out 500ms;
 }
 .main__select {
   border-radius: 0 20px 20px 0;
@@ -870,7 +870,7 @@ a {
   white-space: nowrap;
   margin: 0 0 0 5px;
   padding: 3px;
-  transition: all 300ms ease-out 80ms;
+  transition: all 1000ms;
   font-weight: 400;
 }
 .desert__price {
@@ -881,7 +881,7 @@ a {
   width: 5%;
   font-weight: 900;
   padding: 3px 3px 3px 8px;
-  transition: all 400ms ease-in-out 130ms;
+  transition: all 400ms ease-in-out 500ms;
 }
 .desert__select {
   border-radius: 0 20px 20px 0;
