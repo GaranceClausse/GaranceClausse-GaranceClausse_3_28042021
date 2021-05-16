@@ -1,0 +1,90 @@
+/* Animation de l'apparition des cartes du menu */
+
+@-moz-keyframes items {
+    0%  {opacity:0;}
+    100% {opacity:1;}
+ }
+
+ @-webkit-keyframes items {
+    0%  {opacity:0;}
+    100% {opacity:1;}
+ }
+ 
+ @keyframes items {
+    0%  {opacity:0;}
+    100% {opacity:1;}
+ }
+
+
+ /* Animation du loader*/
+
+
+ @keyframes disappear {
+    0% {
+        transform: scaleX(1);
+        -webkit-transform: scaleX(1);
+        opacity: 1;
+    }
+    20% {
+        transform: scaleX(1);
+        -webkit-transform: scaleX(1);
+    }
+    47% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-3000px);
+        -webkit-transform: translateX(-3000px);
+        opacity: 0.7;
+    }
+  }
+
+  @-webkit-keyframes disappear {
+    0% {
+        transform: scaleX(1);
+        -webkit-transform: scaleX(1);
+        opacity: 1;
+    }
+    20% {
+        transform: scaleX(1);
+        -webkit-transform: scaleX(1);
+    }
+    47% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-3000px);
+        -webkit-transform: translateX(-3000px);
+        opacity: 0.7;
+    }
+  }
+
+
+  @-webkit-keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    37% {
+        -webkit-transform: rotate(168deg);
+        transform: rotate(168deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    37% {
+        -webkit-transform: rotate(168deg);
+        transform: rotate(168deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}

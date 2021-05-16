@@ -3,8 +3,25 @@ $colour-secondary: #FF79DA;
 $colour-tertiary: #99E2D0;
 $colour-black: black;
 $colour-white: #fff;
+$colour-light-background: #f0eeee;
+$colour-midark-background: #d3d1d1;
+$colour-dark-background: #3a3838;
+$colour-dark: #9b9a9a;
+$button-color:  linear-gradient(175deg, $colour-secondary, $colour-primary);
+
+$font-super-big: 26px;
+$font-big: 23px;
+$font-medium: 16px;
+$font-small: 12px;
 
 
-$heading-shadow-size: .55rem;
-$layout-margin: 6rem;
-$grid-gutter: $layout-margin * .25;
+$main-font: 'Roboto', sans-serif;
+$second-font: 'Shrikhand', sans-serif;
+
+$button-color:  linear-gradient(175deg, $colour-secondary, $colour-primary);
+$button-color-light: linear-gradient(175deg, lighten($colour-secondary, 3%), lighten($colour-primary, 10%));
+
+$num-dish: 4;
+$anim-duration: 2000ms;
+$anim-delay: $anim-duration / $num-dish;
+

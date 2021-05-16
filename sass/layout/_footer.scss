@@ -1,0 +1,34 @@
+/* Style du footer */
+
+.footer {
+    width: 100%;
+    padding: 5px;
+    background-color: $colour-dark-background;
+    color: $colour-white;
+    font-family: $main-font;
+
+    &__logo {
+        font-family: $second-font;
+        font-size: 17px;
+        padding: 30px 0 15px 45px;
+        @media all and (min-width:768px) {
+            margin-left: 10%;
+        }
+        
+    }
+
+    &__option {
+        list-style: none;
+        line-height: 30px;
+        color: $colour-white;
+        padding-left: 25px;
+        margin-top: 0;
+        @media all and (min-width:768px) {
+            margin-left: 5%;
+        }
+    }
+
+    &__icon {
+        padding-right: 5px;
+    }
+}
