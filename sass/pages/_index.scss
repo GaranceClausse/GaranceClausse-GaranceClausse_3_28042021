@@ -1,0 +1,285 @@
+#page-index {
+    font-family: $main-font;
+    background-color: $colour-light-background;
+    @include flex-center();
+    flex-direction: column;
+    margin: auto;
+    width: auto;
+    @media all and (min-width: 780px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Style de l'encart description */
+
+#description {
+    background-color: $colour-light-background;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 30px;
+    @include flex-center();
+    flex-direction: column;
+    text-align: center;
+}
+
+.search-bar {
+    height: 40px;
+    width: 100%;
+    background-color: $colour-midark-background;
+    flex-direction: row;
+    @include flex-center();
+    
+    &__icon {
+        padding: 5px 8px;
+    }
+
+    &__input{
+        border: none;
+        padding: 4px 8px;
+        background-color: $colour-midark-background;
+        font-size: $font-medium;
+        font-family: $main-font;
+        font-weight: 700;
+        width: 140px;
+    }
+
+    @media all and (min-width: 780px) {
+        width: 50%;
+        border-radius: 0 0 20px 20px;
+    }
+
+}
+
+/* Style des explications : explaination */
+
+.explaination {
+    flex-direction: column;
+    @include flex-center();
+    padding: 10px 0 25px 0;
+
+    &__short {
+        width: 70%;
+        font-size: $font-big;
+        font-weight: 900;
+        margin: 25px 0 10px 0;
+               
+    }
+
+    &__long {
+        width: 90%;
+        font-size: $font-medium;
+        font-weight: 300;
+        margin: 0 0 30px 0;
+        line-height: 20px;
+    }
+    
+    @media all and (min-width: 780px) {
+        width: 70%;
+    }
+}
+
+
+/* Style de fonctionnement : work */
+
+#work{
+    @include flex-center();
+    flex-direction: column;
+    padding: 20px 10px;
+    background-color: $colour-white;
+    width: 100%;
+}
+
+.work {
+    @include flex-center();
+    flex-direction: row;
+    width: 250px;
+
+    &__title {
+        font-size: $font-super-big;
+        font-weight: 900;
+        margin-right: 30%;
+
+        @media all and (min-width: 680px) {
+            margin-right: 0;
+        }        
+    }
+
+    &__bar {
+       display: flex;
+       width: 310px;
+       padding: 5px;
+       margin: 5px;
+       position: relative;
+
+       @media all and (max-width: 350px) {
+        width: 250px;
+    }
+
+       &--text{
+           width: 310px;
+           margin: 0;
+           background-color: $colour-light-background;
+           padding: 25px 0 25px 35px;
+           @include box-shadow;
+           border-radius: 20px;
+           transition: background-color 300ms ease-in;
+
+           @media all and (max-width: 350px) {
+            width: 240px;
+            padding-left: 15px;
+           }
+
+           &:hover {
+               background-color: lighten($colour-primary, 30%);
+                  .work__icon {
+                   color: $colour-primary;
+                   
+               }                
+            }
+        }
+    }
+
+    &__icon {
+        padding: 0 30px 0 10px;
+        color: $colour-dark;
+        font-size: $font-big;
+        transition: transform 330ms ease-in-out;
+
+        @media all and (max-width: 350px) {
+            padding: 0 10px;
+        }
+    }
+
+    &__number {
+        background-color: $colour-primary;
+        color: $colour-white;
+        border-radius: 20px;
+        padding: 5px 10px;
+        position: absolute;
+        top: 30px;
+        left: -7px;
+    }
+}
+
+
+/*Style de l'encart restaurant*/
+
+.restaurant {
+    background-color: $colour-light-background;
+    width: 100%;
+    
+    @media all and (min-width: 1360px) {
+        width: 60%;
+    }
+
+    @media all and (min-width: 1200px) and (max-width: 1360px) {
+        width: 70%;
+    }
+
+
+    &__title {
+        font-size: $font-super-big;
+        padding: 20px 0 0 20px;
+        font-weight: 900;
+        text-align: center;
+        margin-right: 37%;
+
+        @media all and (min-width: 680px) {
+            margin-right: 0;
+        }
+    }
+
+    &__offer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        margin: 10px 20px 20px 20px;
+
+        @media all and (min-width:780px) {
+            width: 100%;
+            height: auto;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__photo {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 310px;
+        height: 230px;
+        border-radius: 20px;
+        background-color: white;
+        padding-bottom: 5px;
+        margin: 20px 50px;
+        @include box-shadow;
+        @media all and (max-width: 350px) {
+            width: 250px;
+            height: 180px;
+        }
+    }
+
+    &__pic {
+        width: 310px;
+        height: 170px;
+        border-radius: 20px  20px 0 0;
+        @media all and (max-width: 350px) {
+            width: 250px;
+            height: 120px;
+        }
+    }
+
+    &__band {
+        background-color: $colour-white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 10px;
+        border-radius: 20px;
+    }
+
+    &__name {
+        
+        font-size: $font-medium;
+        font-weight: 900;
+    }
+
+    &__place {
+        font-size: $font-medium;
+        font-weight: 200;
+    }
+
+    &__info {
+        font-size: $font-medium;
+        line-height: 8px;
+    }
+
+    &__love {
+       position: relative;         
+    }
+
+    &__ancre {
+        color: $colour-black;
+    }
+
+    &__logo {
+        width: 90px;
+        height: 25px;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: $font-medium;
+        font-weight: 700;
+        background-color: $colour-tertiary;
+        color: darken($colour-tertiary, 40%);        
+        text-align: center;
+        padding-top: 5px;
+    }
+}

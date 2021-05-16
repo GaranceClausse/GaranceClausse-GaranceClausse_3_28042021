@@ -1,3 +1,75 @@
+/* Style du boutton : button*/
+
 .button {
-    color: $colour-secondary;
+    position: relative;
+    display: inline-block;
+    font-style: $main-font;
+    font-size: $font-medium;
+    font-weight: 600;
+    height: 50px;
+    width: 210px;
+    color: $colour-white;
+    border: none;
+    border-radius: 35px;
+    @include box-shadow();
+    overflow: hidden;
+    z-index: 0;
+    background: $button-color;
+    background: -webkit-$button-color;
+    transition: all 400ms;
+
+    &:hover {
+        background: $button-color-light;
+        background: -webkit-$button-color-light;
+        @include large-box-shadow();
+    }
+
+    &:active {
+        transform: translate(0.7px, -1px);
+    }
+
+    
+
+    /*&::after {
+        content: "";
+        position: relative;
+        display: block;
+        opacity: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        @include large-box-shadow();
+        background: $button-color-light;
+        -webkit-background: -webkit-$button-color-light;
+        transition: all 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+
+    &:hover {
+        &::after {
+            z-index: 1;
+            opacity: 1;
+        }
+    }
+
+    
+    */
+    
+
+}
+
+
+    /* Style du bouton coeur */
+    .btn {
+        border: none;
+        padding: 0;
+    }
+
+    /* Style du bouton de commande : order__button */
+
+.order {
+    width: 100%;
+    @include flex-center();
+    padding: 50px 0 70px 0;
+      
 }

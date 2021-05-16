@@ -1,38 +1,154 @@
-/*@mixin heading-shadow($colour:lightness-shift($colour-primary), $offset: $heading-shadow-size){
-    text-shadow: $offset $offset $colour;
+@mixin flex-center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@mixin border($colour:$colour-primary) {
-    border: .1rem solid $colour;
+@mixin box-shadow {
+    box-shadow: 5px 5px 10px $colour-midark-background;
 }
 
-@mixin img-ratio {
-    width: 100%;
-        display: block;
-        overflow: hidden;
-        padding-top: 56.25%;
-        position: relative;
-        & img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100%;
-            transform: translate(-50%, -50%);
+@mixin large-box-shadow {
+    box-shadow: 10px 8px 10px $colour-dark-background;
+}
+
+@mixin linear-gradient {
+    background: linear-gradient(45deg, $colour-secondary, $colour-primary 80%);
+}
+
+@mixin selection () {
+    &__explain {
+        width: 75%;
+    }
+
+    &__select {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+
+    &__icon {
+        transform: rotate(360deg);
+    }
+
+    &__compo {
+        width: 290px;
+        @media all and (max-width: 350px) {
+            width: 200px;
         }
+    }
+
+    &__compo__text {
+        width: 70%;
+    }
 }
 
-@mixin btn {
-    padding: $grid-gutter;
-    @include border;
-    color: $colour-primary;
-    background: $colour-secondary;
-    cursor: pointer;
-    &:hover{
-        background: $colour-primary;
-        color: $colour-accent;
+
+@mixin page-display() {
+
+    background-color: $colour-light-background;
+   
+    &__title {
+        width: 40px;
+        font-size: $font-medium;
+        padding-bottom: 6px;
+        border-bottom: 3px solid $colour-tertiary;
     }
-    &--full-width {
-        width: 100%;
-        margin: 0 auto;
+
+    &__content {
+        padding: 20px 0;
+
+        @media all and (min-width: 780px) {
+            padding: 20px;
+        }
     }
-}*/
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $colour-white;
+        width: 340px;
+        height: 70px;
+        @include box-shadow;
+        border-radius: 20px;
+        margin: 15px 0 0 0;
+        position: relative;
+        
+       @media all and (max-width: 350px) {
+           width: 260px;
+       }
+    }
+
+    &__explain {
+        padding-left: 10px;
+        line-height: 15px;
+        width: 87%;
+        transition: all 300ms ease-out 80ms;        
+    }
+
+    &__name {
+        padding: 10px 0 10px 10px;
+        margin: 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    &__compo{
+        width: 310px;
+        height: 20px;
+        display: flex;
+        flex-direction: row;
+
+        @media all and (max-width: 350px) {
+            width: 200px;
+        }
+               
+   
+        &__text {
+            width: 85%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            margin: 0 0 0 5px;
+            padding: 3px;
+            transition: all 1000ms;
+            font-weight: 400;
+        }
+    }      
+    
+
+    &__price {
+        display: inline;
+        float: right;
+        align-items: center;
+        justify-self: flex-end;
+        width: 5%;
+        font-weight: 900;
+        padding: 3px 3px 3px 8px;
+        transition: all 400ms ease-in-out 500ms;        
+    }
+
+    &__select {
+        border-radius: 0 20px 20px 0;
+        background-color: $colour-tertiary;
+        height: 100%;
+        @include flex-center();
+        opacity: 0;
+        transform: scaleX(0.1);
+        transform-origin: right;
+        transition: all 400ms ease-in-out 150ms;
+    }
+
+    &__icon {
+        color: $colour-white;
+        font-size: $font-super-big;
+        padding: 0 20px;
+        transition: transform 600ms ease-in-out 140ms;
+
+        @media all and (max-width: 350px) {
+            padding: 0 10px;
+        }
+    }
+}
