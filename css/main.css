@@ -461,16 +461,16 @@ a {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  width: 250px;
+  width: 100%;
 }
 .work__title {
   font-size: 26px;
   font-weight: 900;
   margin-right: 30%;
 }
-@media all and (max-width: 680px) {
+@media all and (min-width: 680px) {
   .work__title {
-    margin-right: 70px;
+    margin-right: 0;
   }
 }
 @media all and (max-width: 300px) {

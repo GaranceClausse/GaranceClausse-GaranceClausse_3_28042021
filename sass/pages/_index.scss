@@ -98,19 +98,20 @@ a {
 .work {
     @include flex-center();
     flex-direction: row;
-    width: 250px;
+    width: 100%;
 
     &__title {
         font-size: $font-super-big;
         font-weight: 900;
         margin-right: 30%;
 
-        @media all and (max-width: 680px) {
-            margin-right: 70px;
-        } 
+        @media all and (min-width: 680px) {
+            margin-right: 0;
+        }
+
         @media all and (max-width: 300px) {
             margin-right: 40px;
-        }        
+        }    
     }
 
     &__bar {
