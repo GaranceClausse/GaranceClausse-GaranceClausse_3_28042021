@@ -35,10 +35,14 @@
         @media all and (max-width: 350px) {
             width: 200px;
         }
+        @media all and (max-width: 300px) {
+            width: 150px;
+        }
     }
 
     &__compo__text {
         width: 70%;
+       
     }
 }
 
@@ -78,6 +82,10 @@
        @media all and (max-width: 350px) {
            width: 260px;
        }
+
+       @media all and (max-width: 300px) {
+        width: 220px;
+    }
     }
 
     &__explain {
@@ -103,6 +111,10 @@
 
         @media all and (max-width: 350px) {
             width: 200px;
+        }
+
+        @media all and (max-width: 300px) {
+            width: 180px;
         }
                
    

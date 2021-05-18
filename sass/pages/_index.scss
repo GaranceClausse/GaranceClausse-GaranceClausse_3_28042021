@@ -104,8 +104,11 @@ a {
         font-weight: 900;
         margin-right: 30%;
 
-        @media all and (min-width: 680px) {
-            margin-right: 0;
+        @media all and (max-width: 680px) {
+            margin-right: 70px;
+        } 
+        @media all and (max-width: 300px) {
+            margin-right: 40px;
         }        
     }
 

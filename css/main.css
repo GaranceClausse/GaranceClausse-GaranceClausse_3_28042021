@@ -224,6 +224,11 @@ button {
     right: 30%;
   }
 }
+@media all and (max-width: 300px) {
+  .hover-heart--big {
+    visibility: hidden;
+  }
+}
 .hover-heart:hover {
   background: linear-gradient(45deg, #FF79DA, #9356DC 80%);
   -webkit-background-clip: text;
@@ -463,9 +468,14 @@ a {
   font-weight: 900;
   margin-right: 30%;
 }
-@media all and (min-width: 680px) {
+@media all and (max-width: 680px) {
   .work__title {
-    margin-right: 0;
+    margin-right: 70px;
+  }
+}
+@media all and (max-width: 300px) {
+  .work__title {
+    margin-right: 40px;
   }
 }
 .work__bar {
@@ -732,6 +742,11 @@ a {
     width: 260px;
   }
 }
+@media all and (max-width: 300px) {
+  .starter__item {
+    width: 220px;
+  }
+}
 .starter__explain {
   padding-left: 10px;
   line-height: 15px;
@@ -754,6 +769,11 @@ a {
 @media all and (max-width: 350px) {
   .starter__compo {
     width: 200px;
+  }
+}
+@media all and (max-width: 300px) {
+  .starter__compo {
+    width: 180px;
   }
 }
 .starter__compo__text {
@@ -838,6 +858,11 @@ a {
     width: 200px;
   }
 }
+@media all and (max-width: 300px) {
+  .starter__item:hover .starter__compo {
+    width: 150px;
+  }
+}
 .starter__item:hover .starter__compo__text {
   width: 70%;
 }
@@ -878,6 +903,11 @@ a {
     width: 260px;
   }
 }
+@media all and (max-width: 300px) {
+  .main__item {
+    width: 220px;
+  }
+}
 .main__explain {
   padding-left: 10px;
   line-height: 15px;
@@ -900,6 +930,11 @@ a {
 @media all and (max-width: 350px) {
   .main__compo {
     width: 200px;
+  }
+}
+@media all and (max-width: 300px) {
+  .main__compo {
+    width: 180px;
   }
 }
 .main__compo__text {
@@ -984,6 +1019,11 @@ a {
     width: 200px;
   }
 }
+@media all and (max-width: 300px) {
+  .main__item:hover .main__compo {
+    width: 150px;
+  }
+}
 .main__item:hover .main__compo__text {
   width: 70%;
 }
@@ -1024,6 +1064,11 @@ a {
     width: 260px;
   }
 }
+@media all and (max-width: 300px) {
+  .desert__item {
+    width: 220px;
+  }
+}
 .desert__explain {
   padding-left: 10px;
   line-height: 15px;
@@ -1046,6 +1091,11 @@ a {
 @media all and (max-width: 350px) {
   .desert__compo {
     width: 200px;
+  }
+}
+@media all and (max-width: 300px) {
+  .desert__compo {
+    width: 180px;
   }
 }
 .desert__compo__text {
@@ -1128,6 +1178,11 @@ a {
 @media all and (max-width: 350px) {
   .desert__item:hover .desert__compo {
     width: 200px;
+  }
+}
+@media all and (max-width: 300px) {
+  .desert__item:hover .desert__compo {
+    width: 150px;
   }
 }
 .desert__item:hover .desert__compo__text {

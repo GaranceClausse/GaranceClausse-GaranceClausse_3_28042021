@@ -25,6 +25,10 @@
         @media all and (min-width: 1200px){
             right: 30%;
         }
+
+        @media all and (max-width: 300px) {
+            visibility: hidden;
+        }
        
     }
 
