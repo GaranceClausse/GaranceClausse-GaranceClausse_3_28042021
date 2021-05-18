@@ -5,6 +5,7 @@
     flex-direction: column;
     margin: auto;
     width: auto;
+    overflow-x: hidden;
     @media all and (min-width: 780px) {
         flex-direction: row;
         flex-wrap: wrap;
