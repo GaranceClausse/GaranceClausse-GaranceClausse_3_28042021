@@ -21,7 +21,7 @@ $second-font: 'Shrikhand', sans-serif;
 $button-color:  linear-gradient(175deg, $colour-secondary, $colour-primary);
 $button-color-light: linear-gradient(175deg, lighten($colour-secondary, 3%), lighten($colour-primary, 10%));
 
-$num-dish: 4;
+$num-dish: 6;
 $anim-duration: 2000ms;
 $anim-delay: $anim-duration / $num-dish;
 

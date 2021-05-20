@@ -68,9 +68,8 @@
         animation: items $anim-duration ease-in-out forwards;
         -webkit-animation: items $anim-duration ease-in-out forwards;
         @for $i from 1 through $num-dish {
-            &--#{$i} {
-            animation-delay: $anim-delay * $i;
-            -webkit-animation-delay: $anim-delay * $i;
+            &:nth-child(#{$i}) {
+                animation-delay: page-delay($i);
             }
         }
 
@@ -79,8 +78,9 @@
                 @include selection();
             }           
         }
-    }    
-}
+    } 
+}   
+
 
 
 /* Style des plats : main */
@@ -92,9 +92,8 @@
         animation: items $anim-duration ease-in-out forwards;
         -webkit-animation: items $anim-duration ease-in-out forwards;
         @for $i from 1 through $num-dish {
-            &--#{$i} {
-            animation-delay: $anim-delay * $i;
-            -webkit-animation-delay: $anim-delay * $i;
+            &:nth-child(#{$i}) {
+                animation-delay: page-delay($i);
             }
         }
 
@@ -116,9 +115,8 @@
         animation: items $anim-duration ease-in-out forwards;
         -webkit-animation: items $anim-duration ease-in-out forwards;
         @for $i from 1 through $num-dish {
-            &--#{$i} {
-            animation-delay: $anim-delay * $i;
-            -webkit-animation-delay: $anim-delay * $i;
+            &:nth-child(#{$i}) {
+                animation-delay: page-delay($i);
             }
         }
 
