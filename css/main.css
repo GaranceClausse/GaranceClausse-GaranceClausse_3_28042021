@@ -820,22 +820,22 @@ a {
   -webkit-animation: items 2000ms ease-in-out forwards;
 }
 .starter__item:nth-child(1) {
-  animation-delay: 300ms;
+  animation-delay: 100ms;
 }
 .starter__item:nth-child(2) {
-  animation-delay: 600ms;
+  animation-delay: 400ms;
 }
 .starter__item:nth-child(3) {
   animation-delay: 900ms;
 }
 .starter__item:nth-child(4) {
-  animation-delay: 1200ms;
+  animation-delay: 1600ms;
 }
 .starter__item:nth-child(5) {
-  animation-delay: 1500ms;
+  animation-delay: 2500ms;
 }
 .starter__item:nth-child(6) {
-  animation-delay: 1800ms;
+  animation-delay: 3600ms;
 }
 .starter__item:hover .starter__explain {
   width: 75%;
@@ -983,22 +983,22 @@ a {
   -webkit-animation: items 2000ms ease-in-out forwards;
 }
 .main__item:nth-child(1) {
-  animation-delay: 300ms;
+  animation-delay: 100ms;
 }
 .main__item:nth-child(2) {
-  animation-delay: 600ms;
+  animation-delay: 400ms;
 }
 .main__item:nth-child(3) {
   animation-delay: 900ms;
 }
 .main__item:nth-child(4) {
-  animation-delay: 1200ms;
+  animation-delay: 1600ms;
 }
 .main__item:nth-child(5) {
-  animation-delay: 1500ms;
+  animation-delay: 2500ms;
 }
 .main__item:nth-child(6) {
-  animation-delay: 1800ms;
+  animation-delay: 3600ms;
 }
 .main__item:hover .main__explain {
   width: 75%;
@@ -1146,22 +1146,22 @@ a {
   -webkit-animation: items 2000ms ease-in-out forwards;
 }
 .desert__item:nth-child(1) {
-  animation-delay: 300ms;
+  animation-delay: 100ms;
 }
 .desert__item:nth-child(2) {
-  animation-delay: 600ms;
+  animation-delay: 400ms;
 }
 .desert__item:nth-child(3) {
   animation-delay: 900ms;
 }
 .desert__item:nth-child(4) {
-  animation-delay: 1200ms;
+  animation-delay: 1600ms;
 }
 .desert__item:nth-child(5) {
-  animation-delay: 1500ms;
+  animation-delay: 2500ms;
 }
 .desert__item:nth-child(6) {
-  animation-delay: 1800ms;
+  animation-delay: 3600ms;
 }
 .desert__item:hover .desert__explain {
   width: 75%;
