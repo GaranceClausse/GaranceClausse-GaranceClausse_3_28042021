@@ -1,6 +1,6 @@
 
 @function page-delay($i) {
-    $animation-delay: 300ms;    
-    @return $animation-delay * $i;
+    $animation-delay: 100ms;    
+    @return $animation-delay * $i * $i;
 
 }
