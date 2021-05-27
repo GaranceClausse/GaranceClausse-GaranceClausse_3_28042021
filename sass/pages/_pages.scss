@@ -42,7 +42,10 @@
     &__restaurant {
         font-family: $second-font;
         font-size: $font-super-big;
-        margin: 0;     
+        margin: 0;
+        @media all and (max-width: 320px) {
+            font-size: $font-big;
+        }  
     }
 }
 
@@ -55,6 +58,15 @@
         flex-direction: row;
         flex-wrap: wrap;
         align-items: stretch;
+    }
+    @media all and (min-width: 1140px) {
+        height: 470px;
+        align-items: center;
+    }
+
+    @media all and (min-height: 1200px) {
+        height: 800px;
+        align-items: center;
     }
 }
 
