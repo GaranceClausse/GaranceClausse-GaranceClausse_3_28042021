@@ -103,7 +103,6 @@ body {
 .button {
   position: relative;
   display: inline-block;
-  font-style: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 600;
   height: 50px;
