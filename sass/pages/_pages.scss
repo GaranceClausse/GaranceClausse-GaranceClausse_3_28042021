@@ -1,7 +1,6 @@
 /* Style général des pages de restaurant*/
 
 #page {
-    font-family: $main-font;
     background-color: $colour-light-background;
     @include flex-center();
     flex-direction: column;
