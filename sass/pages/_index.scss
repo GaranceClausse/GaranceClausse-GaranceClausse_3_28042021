@@ -121,7 +121,7 @@ a {
        padding: 5px;
        margin: 5px;
        position: relative;
-
+       
        @media all and (max-width: 350px) {
         width: 250px;
     }
@@ -129,6 +129,7 @@ a {
        &--text{
            width: 310px;
            margin: 0;
+           font-size: $font-medium;
            font-weight: 700;
            background-color: $colour-light-background;
            padding: 25px 0 25px 35px;
