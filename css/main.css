@@ -7,7 +7,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.logo {
+h1.logo {
   font-family: "Shrikhand", sans-serif;
 }
 
@@ -606,7 +606,6 @@ a {
 
 /* Style général des pages de restaurant*/
 #page {
-  font-family: "Roboto", sans-serif;
   background-color: #f0eeee;
   display: flex;
   justify-content: center;
