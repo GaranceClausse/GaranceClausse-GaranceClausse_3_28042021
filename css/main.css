@@ -7,6 +7,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.logo {
+  font-family: "Shrikhand", sans-serif;
+}
+
 /* Animation de l'apparition des cartes du menu */
 @-moz-keyframes items {
   0% {
@@ -250,6 +254,12 @@ body {
 .header__logo {
   width: 160px;
   height: auto;
+  font-size: 26px;
+  color: black;
+}
+.header__logo__link {
+  style: none;
+  color: black;
 }
 .header__icon {
   position: absolute;
@@ -442,6 +452,7 @@ a {
 .work__bar--text {
   width: 310px;
   margin: 0;
+  font-size: 16px;
   font-weight: 700;
   background-color: #f0eeee;
   padding: 25px 0 25px 35px;

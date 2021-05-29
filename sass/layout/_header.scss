@@ -10,6 +10,12 @@
     &__logo {
         width: 160px;
         height: auto;
+        font-size: $font-super-big;
+        color: black;
+        &__link {
+            style: none;
+            color: black;
+        }
         }
 
     &__icon {
