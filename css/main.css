@@ -442,6 +442,7 @@ a {
 .work__bar--text {
   width: 310px;
   margin: 0;
+  font-weight: 700;
   background-color: #f0eeee;
   padding: 25px 0 25px 35px;
   box-shadow: 5px 5px 10px #d3d1d1;
@@ -566,7 +567,7 @@ a {
 }
 .restaurant__place {
   font-size: 16px;
-  font-weight: 200;
+  font-weight: 300;
 }
 .restaurant__info {
   font-size: 16px;

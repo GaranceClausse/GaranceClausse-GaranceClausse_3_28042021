@@ -129,6 +129,7 @@ a {
        &--text{
            width: 310px;
            margin: 0;
+           font-weight: 700;
            background-color: $colour-light-background;
            padding: 25px 0 25px 35px;
            @include box-shadow;
@@ -251,15 +252,14 @@ a {
         border-radius: 20px;
     }
 
-    &__name {
-        
+    &__name {        
         font-size: $font-medium;
         font-weight: 900;
     }
 
     &__place {
         font-size: $font-medium;
-        font-weight: 200;
+        font-weight: 300;
     }
 
     &__info {
